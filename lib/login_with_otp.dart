@@ -1,3 +1,4 @@
+import 'package:design4you/verify_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -88,7 +89,10 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           color: Color.fromARGB(124, 255, 255, 255)),
                       child: Center(
                         child: DropdownButtonFormField(
+                          iconEnabledColor: Colors.white,
                           decoration: const InputDecoration(
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 20),
                             border: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             errorBorder: InputBorder.none,
@@ -96,12 +100,11 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                             disabledBorder: InputBorder.none,
                             enabledBorder: InputBorder.none,
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
                           hint: const Text(
                             'Select Country code',
                             style: TextStyle(color: Colors.white),
                           ),
-                          dropdownColor: const Color.fromARGB(141, 0, 0, 0),
+                          dropdownColor: Color.fromARGB(141, 70, 70, 70),
                           items: contries.map((item) {
                             return DropdownMenuItem(
                               value: item,
@@ -161,7 +164,14 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                               borderRadius: BorderRadius.circular(10)),
                           backgroundColor: Colors.red,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const VerifyOTP(),
+                            ),
+                          );
+                        },
                         child: SizedBox(
                           height: 60,
                           width: double.infinity,
