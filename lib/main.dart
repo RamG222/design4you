@@ -1,10 +1,12 @@
-import 'package:design4you/freelancer/register1/register1.dart';
-import 'package:design4you/freelancer/register2/register2.dart';
+import 'package:camera/camera.dart';
+import 'package:design4you/freelancer/video_interview.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
   runApp(
     const MyApp(),
   );
