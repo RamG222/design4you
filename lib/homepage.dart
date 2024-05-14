@@ -1,4 +1,6 @@
+import 'package:design4you/freelancer/register1/register1.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
 
@@ -82,7 +84,11 @@ class _HomepageState extends State<Homepage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const Register1(),
+                      ));
+                    },
                     child: Container(
                       width: mQWidth / 2.3,
                       height: mQWidth / 2.4,
@@ -125,7 +131,9 @@ class _HomepageState extends State<Homepage> {
                   ),
                   const SizedBox(width: 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const Register1());
+                    },
                     child: Container(
                       width: mQWidth / 2.3,
                       height: mQWidth / 2.4,

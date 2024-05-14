@@ -1,5 +1,6 @@
 import 'package:design4you/verify_otp.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 List<String> contries = [
@@ -104,7 +105,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                             'Select Country code',
                             style: TextStyle(color: Colors.white),
                           ),
-                          dropdownColor: Color.fromARGB(141, 70, 70, 70),
+                          dropdownColor: const Color.fromARGB(141, 70, 70, 70),
                           items: contries.map((item) {
                             return DropdownMenuItem(
                               value: item,
@@ -165,12 +166,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           backgroundColor: Colors.red,
                         ),
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const VerifyOTP(),
-                            ),
-                          );
+                          Get.to(const VerifyOTP());
                         },
                         child: SizedBox(
                           height: 60,

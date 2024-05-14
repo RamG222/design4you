@@ -11,8 +11,14 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
-  native_video_view: ^1.0.5
   widget_and_text_animator: ^1.1.5
+  get: ^4.6.6
+  file_picker: ^8.0.3
+  auto_size_text: ^3.0.0
+  animated_custom_dropdown: ^3.0.0
+  animate_do: ^3.3.4
+  syncfusion_flutter_datepicker: ^25.2.3
+  flutter_calendar_carousel: ^2.4.2
 
 dev_dependencies:
   flutter_test:

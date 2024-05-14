@@ -1,6 +1,7 @@
 import 'package:design4you/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class VerifyOTP extends StatefulWidget {
@@ -53,11 +54,13 @@ class _VerifyOTPState extends State<VerifyOTP> {
 
     if (enteredOtp == '1234') {
       // navigate to next screen
-      Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => const Homepage(),
-      ));
+      Get.offAll(const Homepage());
+      // Navigator.of(context).pushReplacement(MaterialPageRoute(
+      //   builder: (context) => const Homepage(),
+      // ));
     } else {
-      // show error
+      Get.snackbar('Wrong OTP', "Enter Correct OTP to proceed",
+          backgroundColor: const Color.fromARGB(168, 255, 255, 255));
       Navigator.of(context).pop();
     }
   }
