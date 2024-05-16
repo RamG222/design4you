@@ -1,4 +1,6 @@
+import 'package:design4you/freelancer/video_interview.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartInterview extends StatefulWidget {
@@ -250,7 +252,9 @@ class _StartInterviewState extends State<StartInterview> {
                           borderRadius: BorderRadius.circular(5)),
                       backgroundColor: Colors.red,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(VideoInterview());
+                    },
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,

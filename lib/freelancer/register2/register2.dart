@@ -1,5 +1,7 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:design4you/freelancer/register2/add_certification.dart';
+import 'package:design4you/freelancer/register2/display_categories_details_container.dart';
+import 'package:design4you/freelancer/register3/register3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -241,131 +243,70 @@ class _Register2State extends State<Register2> {
                           ],
                         ),
                         SizedBox(height: 20),
-                        Container(
-                          height: 60,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(247, 247, 247, 1),
-                              border: Border.all(
-                                  color: Color.fromRGBO(238, 240, 243, 1))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 12, top: 8),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Graphic Designing',
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 3),
-                                    Text(
-                                      'Logo Designing',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadiusDirectional.circular(4),
-                                        color: Colors.red,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 5, horizontal: 12.0),
-                                        child: Text(
-                                          'Add Price',
-                                          style: GoogleFonts.poppins(
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.delete_outline_rounded))
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        DisplayCategoriesDetailsContainer(),
                         SizedBox(height: 20),
-                        Container(
-                          height: 60,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(247, 247, 247, 1),
-                              border: Border.all(
-                                  color: Color.fromRGBO(238, 240, 243, 1))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 12, top: 8),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Graphic Designing',
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(height: 3),
-                                    Text(
-                                      'Logo Designing',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadiusDirectional.circular(4),
-                                        color: Colors.red,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 5, horizontal: 12.0),
-                                        child: Text(
-                                          'Add Price',
-                                          style: GoogleFonts.poppins(
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.delete_outline_rounded))
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        // Container(
+                        //   height: 60,
+                        //   decoration: BoxDecoration(
+                        //       borderRadius: BorderRadius.circular(10),
+                        //       color: Color.fromRGBO(247, 247, 247, 1),
+                        //       border: Border.all(
+                        //           color: Color.fromRGBO(238, 240, 243, 1))),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //     children: [
+                        //       Container(
+                        //         margin: EdgeInsets.only(left: 12, top: 8),
+                        //         child: Column(
+                        //           crossAxisAlignment: CrossAxisAlignment.start,
+                        //           children: [
+                        //             Text(
+                        //               'Graphic Designing',
+                        //               style: GoogleFonts.poppins(
+                        //                   fontSize: 15,
+                        //                   fontWeight: FontWeight.bold),
+                        //             ),
+                        //             SizedBox(height: 3),
+                        //             Text(
+                        //               'Logo Designing',
+                        //               style: GoogleFonts.poppins(
+                        //                 fontSize: 12,
+                        //               ),
+                        //             ),
+                        //           ],
+                        //         ),
+                        //       ),
+                        //       Row(
+                        //         mainAxisAlignment:
+                        //             MainAxisAlignment.spaceAround,
+                        //         children: [
+                        //           TextButton(
+                        //             onPressed: () {},
+                        //             child: Container(
+                        //               decoration: BoxDecoration(
+                        //                 borderRadius:
+                        //                     BorderRadiusDirectional.circular(4),
+                        //                 color: Colors.red,
+                        //               ),
+                        //               child: Padding(
+                        //                 padding: const EdgeInsets.symmetric(
+                        //                     vertical: 5, horizontal: 12.0),
+                        //                 child: Text(
+                        //                   'Add Price',
+                        //                   style: GoogleFonts.poppins(
+                        //                       color: Colors.white),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           ),
+                        //           IconButton(
+                        //               onPressed: () {},
+                        //               icon: Icon(Icons.delete_outline_rounded))
+                        //         ],
+                        //       ),
+                        //     ],
+                        //   ),
+                        // ),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -489,12 +430,6 @@ class _Register2State extends State<Register2> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/images/microsoft.png',
-                              width: mQWidth / 7,
-                              height: mQWidth / 6,
-                              fit: BoxFit.cover,
-                            ),
                             SizedBox(width: 10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -549,7 +484,7 @@ class _Register2State extends State<Register2> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.edit_outlined,
-                            size: 40,
+                            size: 25,
                           ),
                         ),
                       ],
@@ -560,12 +495,6 @@ class _Register2State extends State<Register2> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/images/microsoft.png',
-                              width: mQWidth / 7,
-                              height: mQWidth / 6,
-                              fit: BoxFit.cover,
-                            ),
                             SizedBox(width: 10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -620,7 +549,7 @@ class _Register2State extends State<Register2> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.edit_outlined,
-                            size: 40,
+                            size: 25,
                           ),
                         ),
                       ],
@@ -631,12 +560,6 @@ class _Register2State extends State<Register2> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              'assets/images/microsoft.png',
-                              width: mQWidth / 7,
-                              height: mQWidth / 6,
-                              fit: BoxFit.cover,
-                            ),
                             SizedBox(width: 10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -691,7 +614,7 @@ class _Register2State extends State<Register2> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.edit_outlined,
-                            size: 40,
+                            size: 25,
                           ),
                         ),
                       ],
@@ -778,7 +701,7 @@ class _Register2State extends State<Register2> {
                         backgroundColor: Colors.red,
                       ),
                       onPressed: () {
-                        Get.off(const Register2());
+                        Get.off(const Register3());
                       },
                       child: SizedBox(
                         height: 50,
