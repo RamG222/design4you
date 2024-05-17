@@ -217,7 +217,84 @@ class _EditCertificationState extends State<EditCertification> {
                   Center(
                     child: TextButton(
                       onPressed: () {
-                        Get.back();
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                              contentPadding: EdgeInsets.zero,
+                              // title: Text('Delete Certification'),
+                              content: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10)),
+                                height: mQHeight / 5,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(height: 25),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20),
+                                      child: Text(
+                                        'Delete Certification',
+                                        style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 21),
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20),
+                                      child: Text(
+                                        'Are you sure you want to delete .this. certificate',
+                                        style:
+                                            GoogleFonts.poppins(fontSize: 15),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Get.back();
+                                            },
+                                            child: Text(
+                                              'No Thanks',
+                                              style: GoogleFonts.poppins(
+                                                  color: Colors.black),
+                                            ),
+                                          ),
+                                          SizedBox(width: 15),
+                                          ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(5)),
+                                              backgroundColor: Colors.red,
+                                            ),
+                                            onPressed: () {},
+                                            child: Center(
+                                              child: Text(
+                                                'Delete',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )),
+                        );
                       },
                       child: Text(
                         'Delete Certificate',
