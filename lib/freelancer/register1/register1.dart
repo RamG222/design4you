@@ -1,10 +1,7 @@
 import 'package:design4you/freelancer/register1/uploadContainer.dart';
 import 'package:design4you/freelancer/register2/register2.dart';
-import 'package:design4you/verify_otp.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 List<String> states = [
@@ -289,42 +286,95 @@ class _Register1State extends State<Register1> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color.fromRGBO(238, 240, 243, 1),
-                          ),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                        child: DropdownButtonFormField(
-                          menuMaxHeight: 300,
-                          decoration: const InputDecoration(
-                            contentPadding:
-                                EdgeInsets.symmetric(horizontal: 11),
-                            border: InputBorder.none,
-                            focusedBorder: InputBorder.none,
-                            errorBorder: InputBorder.none,
-                            focusedErrorBorder: InputBorder.none,
-                            disabledBorder: InputBorder.none,
-                            enabledBorder: InputBorder.none,
-                          ),
-                          hint: Text(
-                            'Select State code',
-                            style: GoogleFonts.poppins(color: Colors.black),
-                          ),
-                          items: states.map((item) {
-                            return DropdownMenuItem(
-                              value: item,
-                              child: Text(item),
-                            );
-                          }).toList(),
-                          onChanged: (value) {
-                            dropdownvalue = value!;
-                          },
-                        ),
+                    Text(
+                      'Address Details',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600, fontSize: 21),
+                    ),
+                    const SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(238, 240, 243, 1)),
+                            borderRadius: BorderRadius.circular(10)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        labelText: 'Pin Code',
+                        labelStyle: GoogleFonts.poppins(color: Colors.black),
+                        hintStyle: GoogleFonts.poppins(color: Colors.black),
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(238, 240, 243, 1)),
+                            borderRadius: BorderRadius.circular(10)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        labelText: 'State',
+                        labelStyle: GoogleFonts.poppins(color: Colors.black),
+                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(238, 240, 243, 1)),
+                            borderRadius: BorderRadius.circular(10)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        labelText: 'District',
+                        labelStyle: GoogleFonts.poppins(color: Colors.black),
+                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                      ),
+                    ),
+                    // Container(
+                    //   height: 60,
+                    //   decoration: BoxDecoration(
+                    //       border: Border.all(
+                    //         color: const Color.fromRGBO(238, 240, 243, 1),
+                    //       ),
+                    //       borderRadius: BorderRadius.circular(10)),
+                    //   child: Center(
+                    //     child: DropdownButtonFormField(
+                    //       menuMaxHeight: 300,
+                    //       decoration: const InputDecoration(
+                    //         contentPadding:
+                    //             EdgeInsets.symmetric(horizontal: 11),
+                    //         border: InputBorder.none,
+                    //         focusedBorder: InputBorder.none,
+                    //         errorBorder: InputBorder.none,
+                    //         focusedErrorBorder: InputBorder.none,
+                    //         disabledBorder: InputBorder.none,
+                    //         enabledBorder: InputBorder.none,
+                    //       ),
+                    //       hint: Text(
+                    //         'Select State code',
+                    //         style: GoogleFonts.poppins(color: Colors.black),
+                    //       ),
+                    //       items: states.map((item) {
+                    //         return DropdownMenuItem(
+                    //           value: item,
+                    //           child: Text(item),
+                    //         );
+                    //       }).toList(),
+                    //       onChanged: (value) {
+                    //         dropdownvalue = value!;
+                    //       },
+                    //     ),
+                    //   ),
+                    // ),
                     const SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
@@ -340,8 +390,12 @@ class _Register1State extends State<Register1> {
                         labelStyle: GoogleFonts.poppins(color: Colors.black),
                         hintStyle: GoogleFonts.poppins(color: Colors.black),
                       ),
+                    ), const SizedBox(height: 20),
+                    Text(
+                      'Password Details',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600, fontSize: 22),
                     ),
-                    const SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(

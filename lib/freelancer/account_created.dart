@@ -15,9 +15,7 @@ class _AccountCreatedState extends State<AccountCreated> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(
-              height: 200,
-            ),
+            SizedBox(height: 200),
             Image.asset(
               'assets/images/done.gif',
               width: 200,
@@ -29,7 +27,7 @@ class _AccountCreatedState extends State<AccountCreated> {
               'Account created successfully',
               style: GoogleFonts.poppins(
                   fontSize: 21, fontWeight: FontWeight.bold),
-            )
+            ),
           ],
         ),
       ),

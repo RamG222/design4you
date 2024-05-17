@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:design4you/freelancer/register2/edit_certification.dart';
 import 'package:design4you/freelancer/video_interview.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: SplashScreen(),
+      home: EditCertification(),
     );
   }
 }

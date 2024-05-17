@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-class AddCertification extends StatefulWidget {
-  const AddCertification({super.key});
+class EditCertification extends StatefulWidget {
+  const EditCertification({super.key});
 
   @override
-  State<AddCertification> createState() => _AddCertificationState();
+  State<EditCertification> createState() => _EditCertificationState();
 }
 
-class _AddCertificationState extends State<AddCertification> {
+class _EditCertificationState extends State<EditCertification> {
   bool checked = false;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _AddCertificationState extends State<AddCertification> {
             children: [
               SizedBox(height: mQHeight / 15),
               Text(
-                'Add Certification',
+                'Edit Certification',
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600, fontSize: 21),
               ),
@@ -220,7 +220,7 @@ class _AddCertificationState extends State<AddCertification> {
                         Get.back();
                       },
                       child: Text(
-                        'Back',
+                        'Delete Certificate',
                         style: GoogleFonts.poppins(
                           color: Colors.black,
                         ),
@@ -240,7 +240,7 @@ class _AddCertificationState extends State<AddCertification> {
                       width: double.infinity,
                       child: Center(
                         child: Text(
-                          'Add',
+                          'Update',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
