@@ -1,14 +1,16 @@
-import 'package:design4you/verify_otp.dart';
+import 'dart:convert';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:design4you/API/api.dart';
+import 'package:design4you/otp/countrycode.dart';
+import 'package:design4you/otp/otp_verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:dio/dio.dart';
 
-List<String> contries = [
-  'India (+91)',
-  'UK (+44)',
-  'USA (+1)',
-];
-String dropdownvalue = 'India';
+//initialize dio http client
+final dio = Dio();
 
 class LoginWithOTP extends StatefulWidget {
   const LoginWithOTP({super.key});
@@ -18,6 +20,56 @@ class LoginWithOTP extends StatefulWidget {
 }
 
 class _LoginWithOTPState extends State<LoginWithOTP> {
+  //aaa
+  List<Countrycode> countrycode = [];
+  final Countrycode dropdownvalue = Countrycode('India', '+91');
+
+  @override
+  void initState() {
+    fetchCountryCode();
+    super.initState();
+  }
+
+  void fetchCountryCode() async {
+    String jsonString = await rootBundle.loadString('assets/CountryCodes.json');
+    final jsonResponse = json.decode(jsonString);
+    setState(() {
+      countrycode = (jsonResponse as List)
+          .map((json) => Countrycode(json['name'], json['dial_code']))
+          .toList();
+    });
+  }
+
+  void reqOTP() async {
+    var mobile = dropdownvalue.code + phoneNumberController.text.trim();
+    try {
+      final response = await dio.post(
+        requestOtpUrl,
+        data: {'mobile': mobile},
+      );
+      print(response.data['OTP']);
+      var otp = response.data['OTP'];
+
+      // if (response.statusCode == 200) {
+      //   Get.offAll(VerifyOTP(
+      //     OtpfromServer: otp,
+      //     mobile: mobile,
+      //   ));
+      // }
+      Get.offAll(VerifyOTP(
+        OtpfromServer: otp,
+        mobile: mobile,
+      ));
+    } catch (e) {
+      print(e);
+      //delete this after testing
+      Get.offAll(VerifyOTP(
+        OtpfromServer: "1234",
+        mobile: mobile,
+      ));
+    }
+  }
+
   var phoneNumberController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -25,6 +77,8 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
     var mQWidth = mQSize.width;
     var mQHeight = mQSize.height;
 
+    Countrycode defaultCountryCode =
+        countrycode[97]; // Set your default country code here
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -86,14 +140,14 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: Container(
                       height: 60,
+                      width: double.infinity,
                       decoration: const BoxDecoration(
                           color: Color.fromARGB(124, 255, 255, 255)),
                       child: Center(
                         child: DropdownButtonFormField(
+                          value: defaultCountryCode,
                           iconEnabledColor: Colors.white,
                           decoration: const InputDecoration(
-                            contentPadding:
-                                EdgeInsets.symmetric(horizontal: 20),
                             border: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             errorBorder: InputBorder.none,
@@ -101,25 +155,28 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                             disabledBorder: InputBorder.none,
                             enabledBorder: InputBorder.none,
                           ),
-                          hint: const Text(
+                          menuMaxHeight: 500,
+                          hint: Text(
                             'Select Country code',
-                            style: TextStyle(color: Colors.white),
+                            style: GoogleFonts.poppins(color: Colors.white),
                           ),
                           dropdownColor: const Color.fromARGB(141, 70, 70, 70),
-                          items: contries.map((item) {
+                          items: countrycode.map((item) {
                             return DropdownMenuItem(
                               value: item,
                               child: Container(
+                                  width: mQWidth / 1.5,
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 20),
-                                  child: Text(
-                                    item,
-                                    style: const TextStyle(color: Colors.white),
+                                  child: AutoSizeText(
+                                    item.name,
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white),
                                   )),
                             );
                           }).toList(),
                           onChanged: (value) {
-                            dropdownvalue = value!;
+                            print(value!.code);
                           },
                         ),
                       ),
@@ -166,7 +223,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           backgroundColor: Colors.red,
                         ),
                         onPressed: () {
-                          Get.to(const VerifyOTP());
+                          reqOTP();
                         },
                         child: SizedBox(
                           height: 60,

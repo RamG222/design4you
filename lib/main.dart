@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:design4you/otp/otp_verification.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -8,6 +9,8 @@ var cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  ///initialize camera
   cameras = await availableCameras();
   runApp(MyApp());
 }
@@ -22,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: SplashScreen(),
-    );
+        //navigates to splash screen
+        home: SplashScreen());
   }
 }

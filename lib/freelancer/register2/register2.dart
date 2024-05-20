@@ -452,29 +452,34 @@ class _Register2State extends State<Register2> {
                                 ),
                                 SizedBox(height: 5),
                                 Container(
+                                  height: 30,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
                                     border: Border.all(
                                         color:
                                             Color.fromRGBO(228, 228, 228, 1)),
                                   ),
-                                  child: TextButton(
-                                      onPressed: () {},
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            'View Credentials  ',
-                                            style: GoogleFonts.poppins(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    child: InkWell(
+                                        onTap: () {},
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'View Credentials  ',
+                                              style: GoogleFonts.poppins(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.link,
                                               color: Colors.black,
                                             ),
-                                          ),
-                                          Icon(
-                                            Icons.link,
-                                            color: Colors.black,
-                                          ),
-                                        ],
-                                      )),
-                                )
+                                          ],
+                                        )),
+                                  ),
+                                ),
                               ],
                             ),
                           ],
@@ -519,35 +524,42 @@ class _Register2State extends State<Register2> {
                                 ),
                                 SizedBox(height: 5),
                                 Container(
+                                  height: 30,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
                                     border: Border.all(
                                         color:
                                             Color.fromRGBO(228, 228, 228, 1)),
                                   ),
-                                  child: TextButton(
-                                      onPressed: () {},
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            'View Credentials  ',
-                                            style: GoogleFonts.poppins(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    child: InkWell(
+                                        onTap: () {},
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'View Credentials  ',
+                                              style: GoogleFonts.poppins(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.link,
                                               color: Colors.black,
                                             ),
-                                          ),
-                                          Icon(
-                                            Icons.link,
-                                            color: Colors.black,
-                                          ),
-                                        ],
-                                      )),
-                                )
+                                          ],
+                                        )),
+                                  ),
+                                ),
                               ],
                             ),
                           ],
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(EditCertification());
+                          },
                           icon: Icon(
                             Icons.edit_outlined,
                             size: 25,
@@ -584,35 +596,42 @@ class _Register2State extends State<Register2> {
                                 ),
                                 SizedBox(height: 5),
                                 Container(
+                                  height: 30,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
                                     border: Border.all(
                                         color:
                                             Color.fromRGBO(228, 228, 228, 1)),
                                   ),
-                                  child: TextButton(
-                                      onPressed: () {},
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            'View Credentials  ',
-                                            style: GoogleFonts.poppins(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    child: InkWell(
+                                        onTap: () {},
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'View Credentials  ',
+                                              style: GoogleFonts.poppins(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.link,
                                               color: Colors.black,
                                             ),
-                                          ),
-                                          Icon(
-                                            Icons.link,
-                                            color: Colors.black,
-                                          ),
-                                        ],
-                                      )),
+                                          ],
+                                        )),
+                                  ),
                                 ),
                               ],
                             ),
                           ],
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(EditCertification());
+                          },
                           icon: Icon(
                             Icons.edit_outlined,
                             size: 25,

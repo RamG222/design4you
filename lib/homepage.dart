@@ -17,6 +17,7 @@ class _HomepageState extends State<Homepage> {
     var mQSize = MediaQuery.of(context).size;
     var mQWidth = mQSize.width;
     var mQHeight = mQSize.height;
+
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -61,9 +62,7 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Container(
               height: 375,
               decoration: const BoxDecoration(

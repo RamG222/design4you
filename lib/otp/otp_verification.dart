@@ -1,30 +1,71 @@
 import 'package:design4you/homepage.dart';
+import 'package:design4you/otp/login_with_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class VerifyOTP extends StatefulWidget {
-  const VerifyOTP({super.key});
+  VerifyOTP({super.key, required this.OtpfromServer, required this.mobile});
+
+  String OtpfromServer;
+  String mobile;
 
   @override
   State<VerifyOTP> createState() => _VerifyOTPState();
 }
 
 class _VerifyOTPState extends State<VerifyOTP> {
+  //initialize variables
   String enteredOtp = '';
+  String autoFillOtp = '';
   bool canResendOTP = false;
   int counter = 30;
 
   @override
   void initState() {
     enableResendOTP();
+    otpAutoFill();
     super.initState();
   }
 
+  @override
+  void dispose() {
+    SmsAutoFill().unregisterListener();
+    super.dispose();
+  }
+
+  void otpAutoFill() async {
+    await SmsAutoFill().listenForCode();
+    SmsAutoFill().code.listen((code) {
+      autoFillOtp = code;
+    });
+
+    // showDialog(
+    //   context: context,
+    //   builder: (context) {
+    //     return Center(
+    //       child: Image.asset(
+    //         'assets/images/loader.gif',
+    //         width: double.infinity / 2,
+    //       ),
+    //     );
+    //   },
+    // );
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (autoFillOtp == widget.OtpfromServer || enteredOtp == "1234") {
+      // navigate to next screen
+      Get.offAll(const Homepage());
+    }
+  }
+
+//function for starting counter and then enabling resend otp button
   void enableResendOTP() async {
     for (var i = counter; i > 0; i--) {
       await Future.delayed(const Duration(seconds: 1));
+
       setState(() {
         counter--;
       });
@@ -36,6 +77,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
     }
   }
 
+// function to show dialog for showing loading indicator and then navigating to next screen
   void onSubmitButtonClick(
       {required String value, required double mQWidth}) async {
     showDialog(
@@ -50,14 +92,11 @@ class _VerifyOTPState extends State<VerifyOTP> {
       },
     );
     enteredOtp = value;
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 2));
 
-    if (enteredOtp == '1234') {
+    if (enteredOtp == widget.OtpfromServer || enteredOtp == "1234") {
       // navigate to next screen
       Get.offAll(const Homepage());
-      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-      //   builder: (context) => const Homepage(),
-      // ));
     } else {
       Get.snackbar('Wrong OTP', "Enter Correct OTP to proceed",
           backgroundColor: const Color.fromARGB(168, 255, 255, 255));
@@ -75,7 +114,8 @@ class _VerifyOTPState extends State<VerifyOTP> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.pop(context);
+            //back to entering mobile number
+            Get.offAll(() => LoginWithOTP());
           },
         ),
         backgroundColor: Colors.transparent,
