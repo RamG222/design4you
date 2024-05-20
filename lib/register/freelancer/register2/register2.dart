@@ -1,8 +1,8 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
-import 'package:design4you/freelancer/register2/add_certification.dart';
-import 'package:design4you/freelancer/register2/display_categories_details_container.dart';
-import 'package:design4you/freelancer/register2/edit_certification.dart';
-import 'package:design4you/freelancer/register3/register3.dart';
+import 'package:design4you/register/freelancer/register2/add_certification.dart';
+import 'package:design4you/register/freelancer/register2/display_categories_details_container.dart';
+import 'package:design4you/register/freelancer/register2/edit_certification.dart';
+import 'package:design4you/register/freelancer/register3/register3.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';

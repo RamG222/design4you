@@ -1,4 +1,5 @@
-import 'package:design4you/freelancer/register1/register1.dart';
+import 'package:design4you/register/client/register.dart';
+import 'package:design4you/register/freelancer/register1/register1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -84,9 +85,7 @@ class _HomepageState extends State<Homepage> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => const Register1(),
-                      ));
+                      Get.offAll(() => Register());
                     },
                     child: Container(
                       width: mQWidth / 2.3,

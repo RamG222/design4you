@@ -1,6 +1,5 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:design4you/freelancer/register1/uploadContainer.dart';
-import 'package:design4you/freelancer/register2/register2.dart';
+import 'package:design4you/register/freelancer/register1/uploadContainer.dart';
+import 'package:design4you/register/freelancer/register2/register2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,16 +45,14 @@ List<String> states = [
 
 String dropdownvalue = '';
 
-class Register extends StatefulWidget {
-  const Register({super.key});
+class Register1 extends StatefulWidget {
+  const Register1({super.key});
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<Register1> createState() => _Register1State();
 }
 
-class _RegisterState extends State<Register> {
-  bool checked = false;
-
+class _Register1State extends State<Register1> {
   @override
   Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;
@@ -78,18 +75,118 @@ class _RegisterState extends State<Register> {
               child: Column(
                 children: [
                   const SizedBox(height: 95),
-                  Text(
-                    'Register',
-                    style: GoogleFonts.poppins(
-                        letterSpacing: 0.5,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 25),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Please enter detail to register',
-                    style: GoogleFonts.poppins(
-                        color: Color.fromRGBO(109, 109, 109, 1)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Center(
+                                child: Text(
+                              '1',
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
+                            )),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Personal',
+                            style: GoogleFonts.poppins(
+                                color: Colors.red, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'Details',
+                            style: GoogleFonts.poppins(
+                                color: Colors.red, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 20),
+                      Container(
+                        width: 20,
+                        height: 1,
+                        color: const Color.fromRGBO(109, 109, 109, 1),
+                      ),
+                      const SizedBox(width: 20),
+                      Column(
+                        children: [
+                          Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Center(
+                                child: Text(
+                              '2',
+                              style: GoogleFonts.poppins(
+                                fontSize: 15,
+                                color: const Color.fromRGBO(109, 109, 109, 1),
+                              ),
+                            )),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Professional',
+                            style: GoogleFonts.poppins(
+                              color: const Color.fromRGBO(109, 109, 109, 1),
+                            ),
+                          ),
+                          Text(
+                            'Details',
+                            style: GoogleFonts.poppins(
+                              color: const Color.fromRGBO(109, 109, 109, 1),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 20),
+                      Container(
+                        width: 20,
+                        height: 1,
+                        color: const Color.fromRGBO(109, 109, 109, 1),
+                      ),
+                      const SizedBox(width: 20),
+                      Column(
+                        children: [
+                          Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Center(
+                                child: Text(
+                              '3',
+                              style: GoogleFonts.poppins(
+                                fontSize: 15,
+                                color: const Color.fromRGBO(109, 109, 109, 1),
+                              ),
+                            )),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Privacy',
+                            style: GoogleFonts.poppins(
+                              color: const Color.fromRGBO(109, 109, 109, 1),
+                            ),
+                          ),
+                          Text(
+                            'Policy',
+                            style: GoogleFonts.poppins(
+                              color: const Color.fromRGBO(109, 109, 109, 1),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -183,27 +280,7 @@ class _RegisterState extends State<Register> {
                             borderRadius: BorderRadius.circular(10)),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        labelText: 'Shop/Business/Company Name',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-
-                    TextField(
-                      minLines: 3,
-                      maxLines: 3,
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                color: Color.fromRGBO(238, 240, 243, 1)),
-                            borderRadius: BorderRadius.circular(10)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        labelText: 'Tell us about Shop/Business/Company',
-                        alignLabelWithHint: true,
+                        labelText: 'Education',
                         labelStyle: GoogleFonts.poppins(color: Colors.black),
                         hintStyle: GoogleFonts.poppins(color: Colors.black),
                       ),
@@ -315,63 +392,11 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    TextField(
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                color: Color.fromRGBO(238, 240, 243, 1)),
-                            borderRadius: BorderRadius.circular(10)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        labelText: 'Landmark and Area',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    Text(
-                      'Logo Details',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 22),
-                    ),
-                    const SizedBox(height: 20),
-
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                              color: Color.fromRGBO(238, 240, 243, 1))),
-                      child: InkWell(
-                        onTap: () {
-                          Get.snackbar('title', 'message');
-                        },
-                        child: SizedBox(
-                          height: 200,
-                          width: double.infinity,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.backup_outlined,
-                                size: 35,
-                              ),
-                              SizedBox(height: 20),
-                              Text('Upload Logo'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
                     Text(
                       'Password Details',
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600, fontSize: 22),
                     ),
-                    const SizedBox(height: 20),
-
                     TextField(
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -403,86 +428,77 @@ class _RegisterState extends State<Register> {
                         hintStyle: GoogleFonts.poppins(color: Colors.black),
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'Upload Documents',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600, fontSize: 22),
+                    ),
                   ],
                 ),
               ),
             ),
             const SizedBox(height: 20),
-
+            const UploadDocumentWidget(
+              heading: 'Aadhar Card Front',
+            ),
+            const SizedBox(height: 20),
+            const UploadDocumentWidget(
+              heading: 'Aadhar Card Back',
+            ),
+            const SizedBox(height: 20),
+            const UploadDocumentWidget(
+              heading: 'Pan Card',
+            ),
+            const SizedBox(height: 20),
+            const UploadDocumentWidget(
+              heading: 'Light Bill',
+            ),
+            const SizedBox(height: 20),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  const SizedBox(height: 40),
-                  Row(
-                    children: [
-                      Checkbox(
-                          materialTapTargetSize: MaterialTapTargetSize.padded,
-                          value: checked,
-                          onChanged: (value) {
-                            setState(() {
-                              checked = value!;
-                            });
-                          }),
-                      Expanded(
-                        child: RichText(
-                          text: TextSpan(
-                            text: 'Yes, I understand and agree to the',
-                            style: GoogleFonts.poppins(color: Colors.black),
-                            children: [
-                              TextSpan(
-                                text: 'Designforyou Terms of Service.',
-                                style: GoogleFonts.poppins(color: Colors.red),
-                              ),
-                              TextSpan(
-                                text: ' including the',
-                                style: GoogleFonts.poppins(color: Colors.black),
-                              ),
-                              TextSpan(
-                                text: 'User Agreement',
-                                style: GoogleFonts.poppins(color: Colors.red),
-                              ),
-                              TextSpan(
-                                text: ' and',
-                                style: GoogleFonts.poppins(color: Colors.black),
-                              ),
-                              TextSpan(
-                                text: 'Privacy Policy',
-                                style: GoogleFonts.poppins(color: Colors.red),
-                              ),
-                            ],
-                          ),
-                        ),
+                  Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromRGBO(238, 240, 243, 1),
                       ),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                  SizedBox(height: 20),
-                  TextButton(
-                    onPressed: () {
-                      Get.back();
-                    },
-                    child: Text(
-                      'Back',
-                      style: GoogleFonts.poppins(
-                        color: Colors.black,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.location_on_outlined,
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            'Live Location',
+                            style: GoogleFonts.poppins(fontSize: 15),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 40),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)),
                       backgroundColor: Colors.red,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.off(const Register2());
+                    },
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,
                       child: Center(
                         child: Text(
-                          'Create Account',
+                          'Save & Next',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -492,23 +508,6 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   const SizedBox(height: 30),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Already have a account?',
-                        style: GoogleFonts.poppins(),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Login',
-                          style: GoogleFonts.poppins(color: Colors.red),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
                 ],
               ),
             ),

@@ -161,10 +161,10 @@ class _AddCertificationState extends State<AddCertification> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
               Row(
                 children: [
                   Checkbox(
+                      activeColor: Colors.red,
                       materialTapTargetSize: MaterialTapTargetSize.padded,
                       value: checked,
                       onChanged: (value) {

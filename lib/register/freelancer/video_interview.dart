@@ -3,7 +3,7 @@
 import 'dart:io';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:camera/camera.dart';
-import 'package:design4you/freelancer/account_created.dart';
+import 'package:design4you/register/freelancer/account_created.dart';
 import 'package:design4you/main.dart';
 import 'package:flutter/material.dart';
 import 'package:gal/gal.dart';

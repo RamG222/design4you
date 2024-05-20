@@ -24,7 +24,7 @@ dependencies:
   path: ^1.9.0
   dio: ^5.4.3+1
   sms_autofill:
-  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

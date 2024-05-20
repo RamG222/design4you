@@ -1,17 +1,16 @@
-import 'package:design4you/freelancer/start_interview.dart';
-import 'package:design4you/freelancer/video_interview.dart';
+import 'package:design4you/register/freelancer/video_interview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Register3 extends StatefulWidget {
-  const Register3({super.key});
+class StartInterview extends StatefulWidget {
+  const StartInterview({super.key});
 
   @override
-  State<Register3> createState() => _Register3State();
+  State<StartInterview> createState() => _StartInterviewState();
 }
 
-class _Register3State extends State<Register3> {
+class _StartInterviewState extends State<StartInterview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +19,7 @@ class _Register3State extends State<Register3> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //Top Container for Steps Information
+            //top container....
             Container(
               height: 190,
               width: double.infinity,
@@ -125,7 +124,7 @@ class _Register3State extends State<Register3> {
                 ],
               ),
             ),
-
+            //
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 20,
@@ -133,48 +132,120 @@ class _Register3State extends State<Register3> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 40),
                   Text(
-                    'Agreement',
+                    'Conditions',
                     style: GoogleFonts.poppins(fontSize: 20),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   Text(
-                    'Terms of Service',
+                    'Video Interview',
                     style: GoogleFonts.poppins(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
-                  ),
-                  SizedBox(height: 25),
-                  Text(
-                    'License',
-                    style: GoogleFonts.poppins(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                      text: ' • ',
+                      style: GoogleFonts.poppins(
+                          fontSize: 25, color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: 'Interview Questions :',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        TextSpan(
+                          text:
+                              ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
+                          style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                      ],
                     ),
                   ),
-                  Text(
-                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
-                  ),
-                  SizedBox(height: 25),
-                  Text(
-                    'Disclaimer',
-                    style: GoogleFonts.poppins(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                      text: ' • ',
+                      style: GoogleFonts.poppins(
+                          fontSize: 25, color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: 'Interview Questions :',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        TextSpan(
+                          text:
+                              ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
+                          style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                      ],
                     ),
                   ),
-                  Text(
-                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                      text: ' • ',
+                      style: GoogleFonts.poppins(
+                          fontSize: 25, color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: 'Interview Questions :',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        TextSpan(
+                          text:
+                              ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
+                          style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 40),
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                      text: ' • ',
+                      style: GoogleFonts.poppins(
+                          fontSize: 25, color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: 'Interview Questions :',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        TextSpan(
+                          text:
+                              ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
+                          style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                      text: ' • ',
+                      style: GoogleFonts.poppins(
+                          fontSize: 25, color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: 'Interview Questions :',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                        TextSpan(
+                          text:
+                              ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
+                          style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 80),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -182,14 +253,14 @@ class _Register3State extends State<Register3> {
                       backgroundColor: Colors.red,
                     ),
                     onPressed: () {
-                      Get.to(StartInterview());
+                      Get.to(VideoInterview());
                     },
                     child: SizedBox(
                       height: 50,
                       width: double.infinity,
                       child: Center(
                         child: Text(
-                          'Agree & Accept',
+                          'Start Interview',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

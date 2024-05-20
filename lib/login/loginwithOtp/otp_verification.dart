@@ -1,5 +1,5 @@
 import 'package:design4you/homepage.dart';
-import 'package:design4you/otp/login_with_otp.dart';
+import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';

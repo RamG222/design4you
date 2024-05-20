@@ -1,4 +1,4 @@
-import 'package:design4you/otp/login_with_otp.dart';
+import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

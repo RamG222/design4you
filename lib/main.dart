@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/otp/otp_verification.dart';
+import 'package:design4you/login/loginwithPassword/login_with_pw.dart';
+import 'package:design4you/register/freelancer/register1/register1.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -25,7 +26,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        //navigates to splash screen
-        home: SplashScreen());
+      //navigates to splash screen
+      home: SplashScreen(),
+    );
   }
 }
