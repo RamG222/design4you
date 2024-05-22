@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginWithPw extends StatefulWidget {
   const LoginWithPw({super.key});
@@ -31,13 +30,17 @@ class _LoginWithPwState extends State<LoginWithPw> {
               SizedBox(height: 30),
               Text(
                 'Welcome,',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold, fontSize: 35),
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35),
               ),
               Text(
                 'to Design for you',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold, fontSize: 40),
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40),
               ),
               SizedBox(height: 40),
               TextField(
@@ -51,8 +54,10 @@ class _LoginWithPwState extends State<LoginWithPw> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Registered Email ID',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 30),
@@ -68,8 +73,10 @@ class _LoginWithPwState extends State<LoginWithPw> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Password',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               Container(
@@ -78,7 +85,8 @@ class _LoginWithPwState extends State<LoginWithPw> {
                     onPressed: () {},
                     child: Text(
                       'Forgot Password',
-                      style: GoogleFonts.poppins(color: Colors.red),
+                      style:
+                          TextStyle(fontFamily: 'Poppins', color: Colors.red),
                     )),
               ),
               const SizedBox(height: 40),
@@ -95,7 +103,8 @@ class _LoginWithPwState extends State<LoginWithPw> {
                   child: Center(
                     child: Text(
                       'Login',
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),

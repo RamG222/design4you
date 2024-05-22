@@ -2,46 +2,6 @@ import 'package:design4you/register/freelancer/register1/uploadContainer.dart';
 import 'package:design4you/register/freelancer/register2/register2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-List<String> states = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jammu and Kashmir",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Ladakh",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttarakhand",
-  "Uttar Pradesh",
-  "West Bengal",
-  "Andaman and Nicobar Islands",
-  "Chandigarh",
-  "Daman and Diu and Dadra and Nagar Haveli",
-  "Delhi",
-  "Lakshadweep",
-  "Puducherry"
-];
 
 String dropdownvalue = '';
 
@@ -89,7 +49,8 @@ class _Register1State extends State<Register1> {
                             child: Center(
                                 child: Text(
                               '1',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontSize: 15,
                               ),
@@ -98,13 +59,17 @@ class _Register1State extends State<Register1> {
                           const SizedBox(height: 8),
                           Text(
                             'Personal',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -126,7 +91,8 @@ class _Register1State extends State<Register1> {
                             child: Center(
                                 child: Text(
                               '2',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 fontSize: 15,
                                 color: const Color.fromRGBO(109, 109, 109, 1),
                               ),
@@ -135,13 +101,15 @@ class _Register1State extends State<Register1> {
                           const SizedBox(height: 8),
                           Text(
                             'Professional',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -165,7 +133,8 @@ class _Register1State extends State<Register1> {
                             child: Center(
                                 child: Text(
                               '3',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 fontSize: 15,
                                 color: const Color.fromRGBO(109, 109, 109, 1),
                               ),
@@ -174,13 +143,15 @@ class _Register1State extends State<Register1> {
                           const SizedBox(height: 8),
                           Text(
                             'Privacy',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Policy',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -200,8 +171,10 @@ class _Register1State extends State<Register1> {
                   children: [
                     Text(
                       'Personal Details',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 21),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 21),
                     ),
                     const SizedBox(height: 20),
                     Row(
@@ -224,10 +197,10 @@ class _Register1State extends State<Register1> {
                                       color: Color.fromRGBO(238, 240, 243, 1)),
                                   borderRadius: BorderRadius.circular(10)),
                               labelText: 'First Name',
-                              labelStyle:
-                                  GoogleFonts.poppins(color: Colors.black),
-                              hintStyle:
-                                  GoogleFonts.poppins(color: Colors.black),
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Poppins', color: Colors.black),
+                              hintStyle: TextStyle(
+                                  fontFamily: 'Poppins', color: Colors.black),
                             ),
                           ),
                         ),
@@ -244,10 +217,10 @@ class _Register1State extends State<Register1> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
                               labelText: 'Last Name',
-                              labelStyle:
-                                  GoogleFonts.poppins(color: Colors.black),
-                              hintStyle:
-                                  GoogleFonts.poppins(color: Colors.black),
+                              labelStyle: TextStyle(
+                                  fontFamily: 'Poppins', color: Colors.black),
+                              hintStyle: TextStyle(
+                                  fontFamily: 'Poppins', color: Colors.black),
                             ),
                           ),
                         ),
@@ -265,8 +238,10 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'Email ID',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -281,15 +256,19 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'Education',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
                     Text(
                       'Address Details',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 21),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 21),
                     ),
                     const SizedBox(height: 20),
                     TextField(
@@ -303,8 +282,10 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'Pin Code',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -319,8 +300,10 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'State',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -335,46 +318,12 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'District',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
-                    // Container(
-                    //   height: 60,
-                    //   decoration: BoxDecoration(
-                    //       border: Border.all(
-                    //         color: const Color.fromRGBO(238, 240, 243, 1),
-                    //       ),
-                    //       borderRadius: BorderRadius.circular(10)),
-                    //   child: Center(
-                    //     child: DropdownButtonFormField(
-                    //       menuMaxHeight: 300,
-                    //       decoration: const InputDecoration(
-                    //         contentPadding:
-                    //             EdgeInsets.symmetric(horizontal: 11),
-                    //         border: InputBorder.none,
-                    //         focusedBorder: InputBorder.none,
-                    //         errorBorder: InputBorder.none,
-                    //         focusedErrorBorder: InputBorder.none,
-                    //         disabledBorder: InputBorder.none,
-                    //         enabledBorder: InputBorder.none,
-                    //       ),
-                    //       hint: Text(
-                    //         'Select State code',
-                    //         style: GoogleFonts.poppins(color: Colors.black),
-                    //       ),
-                    //       items: states.map((item) {
-                    //         return DropdownMenuItem(
-                    //           value: item,
-                    //           child: Text(item),
-                    //         );
-                    //       }).toList(),
-                    //       onChanged: (value) {
-                    //         dropdownvalue = value!;
-                    //       },
-                    //     ),
-                    //   ),
-                    // ),
                     const SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
@@ -387,15 +336,19 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'City',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
                     Text(
                       'Password Details',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 22),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 22),
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -408,8 +361,10 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'Password',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -424,15 +379,19 @@ class _Register1State extends State<Register1> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                         labelText: 'Confirm Password',
-                        labelStyle: GoogleFonts.poppins(color: Colors.black),
-                        hintStyle: GoogleFonts.poppins(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
+                        hintStyle: TextStyle(
+                            fontFamily: 'Poppins', color: Colors.black),
                       ),
                     ),
                     const SizedBox(height: 20),
                     Text(
                       'Upload Documents',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 22),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 22),
                     ),
                   ],
                 ),
@@ -477,7 +436,8 @@ class _Register1State extends State<Register1> {
                           const SizedBox(width: 10),
                           Text(
                             'Live Location',
-                            style: GoogleFonts.poppins(fontSize: 15),
+                            style:
+                                TextStyle(fontFamily: 'Poppins', fontSize: 15),
                           ),
                         ],
                       ),
@@ -499,7 +459,8 @@ class _Register1State extends State<Register1> {
                       child: Center(
                         child: Text(
                           'Save & Next',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

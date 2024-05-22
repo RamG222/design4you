@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AccountCreated extends StatefulWidget {
   const AccountCreated({super.key});
@@ -25,8 +24,10 @@ class _AccountCreatedState extends State<AccountCreated> {
             ),
             Text(
               'Account created successfully',
-              style: GoogleFonts.poppins(
-                  fontSize: 21, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold),
             ),
           ],
         ),

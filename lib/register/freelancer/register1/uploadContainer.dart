@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 bool clickedOnFileUpload = false;
 
@@ -59,11 +58,13 @@ class _UploadDocumentWidgetState extends State<UploadDocumentWidget> {
                             'File Name ',
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
-                            style: GoogleFonts.poppins(fontSize: 20),
+                            style:
+                                TextStyle(fontFamily: 'Poppins', fontSize: 20),
                           ),
                           AutoSizeText(
                             'File Size ',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 13,
                               color: const Color.fromRGBO(152, 150, 146, 1),
                             ),
@@ -102,7 +103,8 @@ class _UploadDocumentWidgetState extends State<UploadDocumentWidget> {
               color: Colors.white,
               child: Text(
                 widget.heading,
-                style: GoogleFonts.poppins(color: Colors.black, fontSize: 12),
+                style: TextStyle(
+                    fontFamily: 'Poppins', color: Colors.black, fontSize: 12),
               ),
             ),
           ),
@@ -126,7 +128,7 @@ class _UploadDocumentWidgetState extends State<UploadDocumentWidget> {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 widget.heading,
-                style: GoogleFonts.poppins(color: Colors.black),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.black),
               ),
             ),
             Row(

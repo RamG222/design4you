@@ -1,14 +1,13 @@
-// ignore_for_file: unused_local_variable
-
 import 'dart:io';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:camera/camera.dart';
 import 'package:design4you/register/freelancer/account_created.dart';
 import 'package:design4you/main.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gal/gal.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 
@@ -25,6 +24,7 @@ class VideoInterview extends StatefulWidget {
 class _VideoInterviewState extends State<VideoInterview> {
   late CameraController cameraController;
   late Future<void> cameraValue;
+
   @override
   void initState() {
     startCamera();
@@ -41,20 +41,18 @@ class _VideoInterviewState extends State<VideoInterview> {
   void startRecording() async {
     Get.snackbar('Recording Start', 'After 10 seconds it will end');
     try {
-      //Starts recording video
       await cameraValue;
       await cameraController.prepareForVideoRecording();
-
       await cameraController.startVideoRecording();
-
       await Future.delayed(Duration(seconds: 10));
       stopRecording();
-    } catch (e) {}
+    } catch (e) {
+      // Handle errors here
+    }
   }
 
   void stopRecording() async {
     XFile video = await cameraController.stopVideoRecording();
-
     final Directory tempDir = await getTemporaryDirectory();
     final String tempPath = video.path;
     final String newFileName =
@@ -67,7 +65,9 @@ class _VideoInterviewState extends State<VideoInterview> {
       setState(() {
         enableButton = true;
       });
-    } catch (e) {}
+    } catch (e) {
+      // Handle errors here
+    }
   }
 
   @override
@@ -82,18 +82,19 @@ class _VideoInterviewState extends State<VideoInterview> {
             future: cameraValue,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                return Stack(
+                return Column(
                   children: [
-                    SizedBox(
-                      height: mQHeight / 1.25,
-                      width: double.infinity,
-                      child: CameraPreview(cameraController),
+                    Container(
+                      height: mQHeight / 1.3,
+                      child: Transform.scale(
+                        scale: 1.6,
+                        child: CameraPreview(cameraController),
+                      ),
                     ),
                     Column(
                       children: [
-                        SizedBox(height: mQHeight / 1.3),
                         Container(
-                          width: double.infinity,
+                          width: mQWidth,
                           height: mQHeight - (mQHeight / 1.3),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -112,13 +113,15 @@ class _VideoInterviewState extends State<VideoInterview> {
                                   children: [
                                     Text(
                                       'Question 1',
-                                      style: GoogleFonts.poppins(
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18),
                                     ),
                                     Text(
                                       '0:15',
-                                      style: GoogleFonts.poppins(
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.bold,
                                           fontSize: 12),
                                     ),
@@ -128,7 +131,8 @@ class _VideoInterviewState extends State<VideoInterview> {
                                   "What is cloud computing, and how are what major services are available?",
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 3,
-                                  style: GoogleFonts.poppins(fontSize: 14),
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins', fontSize: 14),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -147,7 +151,8 @@ class _VideoInterviewState extends State<VideoInterview> {
                                     child: Center(
                                       child: Text(
                                         'Next Question',
-                                        style: GoogleFonts.poppins(
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -161,11 +166,11 @@ class _VideoInterviewState extends State<VideoInterview> {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 );
               } else {
-                return Container();
+                return Center(child: CircularProgressIndicator());
               }
             },
           ),

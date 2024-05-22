@@ -1,7 +1,6 @@
 import 'package:design4you/register/freelancer/video_interview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class StartInterview extends StatefulWidget {
   const StartInterview({super.key});
@@ -42,13 +41,15 @@ class _StartInterviewState extends State<StartInterview> {
                           const SizedBox(height: 8),
                           Text(
                             'Personal',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -70,13 +71,15 @@ class _StartInterviewState extends State<StartInterview> {
                           const SizedBox(height: 8),
                           Text(
                             'Professional',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -100,7 +103,8 @@ class _StartInterviewState extends State<StartInterview> {
                             child: Center(
                                 child: Text(
                               '3',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontSize: 15,
                               ),
@@ -109,13 +113,17 @@ class _StartInterviewState extends State<StartInterview> {
                           const SizedBox(height: 8),
                           Text(
                             'Privacy',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Policy',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -135,12 +143,13 @@ class _StartInterviewState extends State<StartInterview> {
                   SizedBox(height: 40),
                   Text(
                     'Conditions',
-                    style: GoogleFonts.poppins(fontSize: 20),
+                    style: TextStyle(fontFamily: 'Poppins', fontSize: 20),
                   ),
                   SizedBox(height: 10),
                   Text(
                     'Video Interview',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -149,18 +158,22 @@ class _StartInterviewState extends State<StartInterview> {
                   RichText(
                     text: TextSpan(
                       text: ' • ',
-                      style: GoogleFonts.poppins(
-                          fontSize: 25, color: Colors.black),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 25,
+                          color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'Interview Questions :',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
                         ),
                         TextSpan(
                           text:
                               ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
-                          style: GoogleFonts.poppins(fontSize: 15),
+                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
                         ),
                       ],
                     ),
@@ -169,18 +182,22 @@ class _StartInterviewState extends State<StartInterview> {
                   RichText(
                     text: TextSpan(
                       text: ' • ',
-                      style: GoogleFonts.poppins(
-                          fontSize: 25, color: Colors.black),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 25,
+                          color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'Interview Questions :',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
                         ),
                         TextSpan(
                           text:
                               ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
-                          style: GoogleFonts.poppins(fontSize: 15),
+                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
                         ),
                       ],
                     ),
@@ -189,18 +206,22 @@ class _StartInterviewState extends State<StartInterview> {
                   RichText(
                     text: TextSpan(
                       text: ' • ',
-                      style: GoogleFonts.poppins(
-                          fontSize: 25, color: Colors.black),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 25,
+                          color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'Interview Questions :',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
                         ),
                         TextSpan(
                           text:
                               ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
-                          style: GoogleFonts.poppins(fontSize: 15),
+                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
                         ),
                       ],
                     ),
@@ -209,18 +230,22 @@ class _StartInterviewState extends State<StartInterview> {
                   RichText(
                     text: TextSpan(
                       text: ' • ',
-                      style: GoogleFonts.poppins(
-                          fontSize: 25, color: Colors.black),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 25,
+                          color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'Interview Questions :',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
                         ),
                         TextSpan(
                           text:
                               ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
-                          style: GoogleFonts.poppins(fontSize: 15),
+                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
                         ),
                       ],
                     ),
@@ -229,18 +254,22 @@ class _StartInterviewState extends State<StartInterview> {
                   RichText(
                     text: TextSpan(
                       text: ' • ',
-                      style: GoogleFonts.poppins(
-                          fontSize: 25, color: Colors.black),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 25,
+                          color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'Interview Questions :',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
                         ),
                         TextSpan(
                           text:
                               ' I am asking 5 interview questions in a video. Every question has 30 seconds of answering time.',
-                          style: GoogleFonts.poppins(fontSize: 15),
+                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
                         ),
                       ],
                     ),
@@ -261,7 +290,8 @@ class _StartInterviewState extends State<StartInterview> {
                       child: Center(
                         child: Text(
                           'Start Interview',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class AddCertification extends StatefulWidget {
@@ -28,8 +27,10 @@ class _AddCertificationState extends State<AddCertification> {
               SizedBox(height: mQHeight / 15),
               Text(
                 'Add Certification',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w600, fontSize: 21),
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 21),
               ),
               SizedBox(height: 20),
               TextField(
@@ -43,8 +44,10 @@ class _AddCertificationState extends State<AddCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Certification Name',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -59,8 +62,10 @@ class _AddCertificationState extends State<AddCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Issuinng Organization',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -80,8 +85,10 @@ class _AddCertificationState extends State<AddCertification> {
                     children: [
                       Text(
                         'Issue Date',
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontSize: 15),
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                            fontSize: 15),
                       ),
                       IconButton(
                         onPressed: () {
@@ -129,8 +136,10 @@ class _AddCertificationState extends State<AddCertification> {
                     children: [
                       Text(
                         'Expiry Date',
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontSize: 15),
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                            fontSize: 15),
                       ),
                       IconButton(
                         onPressed: () {
@@ -174,7 +183,8 @@ class _AddCertificationState extends State<AddCertification> {
                       }),
                   Text(
                     'Does not expire',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
                         color: Color.fromRGBO(156, 156, 156, 1)),
                   ),
                 ],
@@ -191,8 +201,10 @@ class _AddCertificationState extends State<AddCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Credential ID',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -207,8 +219,10 @@ class _AddCertificationState extends State<AddCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Credential URL',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: mQHeight / 10),
@@ -221,7 +235,8 @@ class _AddCertificationState extends State<AddCertification> {
                       },
                       child: Text(
                         'Back',
-                        style: GoogleFonts.poppins(
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.black,
                         ),
                       ),
@@ -241,7 +256,8 @@ class _AddCertificationState extends State<AddCertification> {
                       child: Center(
                         child: Text(
                           'Add',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

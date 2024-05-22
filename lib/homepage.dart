@@ -2,7 +2,6 @@ import 'package:design4you/register/client/register.dart';
 import 'package:design4you/register/freelancer/register1/register1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
 
 class Homepage extends StatefulWidget {
@@ -39,7 +38,8 @@ class _HomepageState extends State<Homepage> {
                 children: [
                   Text(
                     'Pick',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
@@ -52,7 +52,8 @@ class _HomepageState extends State<Homepage> {
                       TextAnimator(
                         'Your Choice',
                         characterDelay: const Duration(milliseconds: 250),
-                        style: GoogleFonts.poppins(
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 40,
@@ -112,7 +113,8 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Text(
                             'I am A Client',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
@@ -120,7 +122,9 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Text(
                             'Hiring for projects',
-                            style: GoogleFonts.poppins(),
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -157,7 +161,8 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Text(
                             'I am A Freelancer',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
@@ -165,7 +170,9 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Text(
                             'Looking for projects',
-                            style: GoogleFonts.poppins(),
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ],

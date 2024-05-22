@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 double workExp = 0.0;
 
@@ -69,13 +68,16 @@ class _DisplayCategoriesDetailsContainerState
                     SizedBox(height: 8),
                     Text(
                       'Graphic Designing',
-                      style: GoogleFonts.poppins(
-                          fontSize: 15, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 3),
                     Text(
                       'Logo Designing',
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontSize: 12,
                       ),
                     ),
@@ -98,7 +100,8 @@ class _DisplayCategoriesDetailsContainerState
                         ),
                         child: Text(
                           'Add Price',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -120,7 +123,8 @@ class _DisplayCategoriesDetailsContainerState
                   children: [
                     Text(
                       'Price Details',
-                      style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontFamily: 'Poppins', fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 10),
                     Tooltip(
@@ -138,14 +142,16 @@ class _DisplayCategoriesDetailsContainerState
                   children: [
                     Text(
                       '0-1 Yrs',
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontWeight:
                             workExp == 0 ? FontWeight.bold : FontWeight.normal,
                       ),
                     ),
                     Text(
                       '2-4 Yrs',
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontWeight: workExp == 0.5
                             ? FontWeight.bold
                             : FontWeight.normal,
@@ -153,7 +159,8 @@ class _DisplayCategoriesDetailsContainerState
                     ),
                     Text(
                       '5+ Yrs',
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontWeight:
                             workExp == 1 ? FontWeight.bold : FontWeight.normal,
                       ),
@@ -203,9 +210,10 @@ class _DisplayCategoriesDetailsContainerState
                                     color: Color.fromRGBO(238, 240, 243, 1)),
                                 borderRadius: BorderRadius.circular(10)),
                             labelText: 'Minimum',
-                            labelStyle:
-                                GoogleFonts.poppins(color: Colors.black),
-                            hintStyle: GoogleFonts.poppins(color: Colors.black),
+                            labelStyle: TextStyle(
+                                fontFamily: 'Poppins', color: Colors.black),
+                            hintStyle: TextStyle(
+                                fontFamily: 'Poppins', color: Colors.black),
                           ),
                         ),
                       ),
@@ -228,9 +236,10 @@ class _DisplayCategoriesDetailsContainerState
                                     color: Color.fromRGBO(238, 240, 243, 1)),
                                 borderRadius: BorderRadius.circular(10)),
                             labelText: 'Maximum',
-                            labelStyle:
-                                GoogleFonts.poppins(color: Colors.black),
-                            hintStyle: GoogleFonts.poppins(color: Colors.black),
+                            labelStyle: TextStyle(
+                                fontFamily: 'Poppins', color: Colors.black),
+                            hintStyle: TextStyle(
+                                fontFamily: 'Poppins', color: Colors.black),
                           ),
                         ),
                       ),
@@ -252,8 +261,10 @@ class _DisplayCategoriesDetailsContainerState
                         },
                         child: Text(
                           'May be later',
-                          style: GoogleFonts.poppins(
-                              color: Colors.red, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
@@ -272,7 +283,8 @@ class _DisplayCategoriesDetailsContainerState
                           child: Center(
                             child: Text(
                               'Submit',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),

@@ -18,6 +18,7 @@ class SplashScreen extends StatelessWidget {
     loadAndNavigate();
 
     return Scaffold(
+      //load splash screen image (gif)
       body: Image.asset(
         'assets/images/ss.gif',
         width: double.infinity,

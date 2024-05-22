@@ -2,7 +2,6 @@ import 'package:design4you/register/freelancer/start_interview.dart';
 import 'package:design4you/register/freelancer/video_interview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Register3 extends StatefulWidget {
   const Register3({super.key});
@@ -43,13 +42,15 @@ class _Register3State extends State<Register3> {
                           const SizedBox(height: 8),
                           Text(
                             'Personal',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -71,13 +72,15 @@ class _Register3State extends State<Register3> {
                           const SizedBox(height: 8),
                           Text(
                             'Professional',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -101,7 +104,8 @@ class _Register3State extends State<Register3> {
                             child: Center(
                                 child: Text(
                               '3',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontSize: 15,
                               ),
@@ -110,13 +114,17 @@ class _Register3State extends State<Register3> {
                           const SizedBox(height: 8),
                           Text(
                             'Privacy',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Policy',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -136,43 +144,52 @@ class _Register3State extends State<Register3> {
                   SizedBox(height: 20),
                   Text(
                     'Agreement',
-                    style: GoogleFonts.poppins(fontSize: 20),
+                    style: TextStyle(fontFamily: 'Poppins', fontSize: 20),
                   ),
                   SizedBox(height: 20),
                   Text(
                     'Terms of Service',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                   SizedBox(height: 25),
                   Text(
                     'License',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                   SizedBox(height: 25),
                   Text(
                     'Disclaimer',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                    style: GoogleFonts.poppins(),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                   SizedBox(height: 40),
                   ElevatedButton(
@@ -190,7 +207,8 @@ class _Register3State extends State<Register3> {
                       child: Center(
                         child: Text(
                           'Agree & Accept',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

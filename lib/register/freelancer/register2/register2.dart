@@ -5,7 +5,6 @@ import 'package:design4you/register/freelancer/register2/edit_certification.dart
 import 'package:design4you/register/freelancer/register3/register3.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 List<String> categories = [
   'Graphic Design',
@@ -65,13 +64,15 @@ class _Register2State extends State<Register2> {
                           const SizedBox(height: 8),
                           Text(
                             'Personal',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -95,7 +96,8 @@ class _Register2State extends State<Register2> {
                             child: Center(
                                 child: Text(
                               '2',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontSize: 15,
                               ),
@@ -104,13 +106,17 @@ class _Register2State extends State<Register2> {
                           const SizedBox(height: 8),
                           Text(
                             'Professional',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
-                                color: Colors.red, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -132,7 +138,8 @@ class _Register2State extends State<Register2> {
                             child: Center(
                                 child: Text(
                               '3',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 fontSize: 15,
                                 color: const Color.fromRGBO(109, 109, 109, 1),
                               ),
@@ -141,13 +148,15 @@ class _Register2State extends State<Register2> {
                           const SizedBox(height: 8),
                           Text(
                             'Privacy',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
                           Text(
                             'Policy',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: const Color.fromRGBO(109, 109, 109, 1),
                             ),
                           ),
@@ -167,8 +176,10 @@ class _Register2State extends State<Register2> {
                   children: [
                     Text(
                       'Skills',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 21),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 21),
                     ),
                     const SizedBox(height: 20),
                     Container(
@@ -181,7 +192,8 @@ class _Register2State extends State<Register2> {
                       child: CustomDropdown(
                         hintText: 'Category',
                         decoration: CustomDropdownDecoration(
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.black,
                         )),
                         items: categories,
@@ -203,7 +215,8 @@ class _Register2State extends State<Register2> {
                         hintText: 'Sub Category',
                         items: subCategories,
                         decoration: CustomDropdownDecoration(
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.black,
                         )),
                         onListChanged: (value) {
@@ -220,8 +233,10 @@ class _Register2State extends State<Register2> {
                           children: [
                             Text(
                               'Selected categories',
-                              style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.w600, fontSize: 21),
+                              style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 21),
                             ),
                             IconButton(
                               onPressed: () {},
@@ -231,7 +246,8 @@ class _Register2State extends State<Register2> {
                                   const SizedBox(width: 3),
                                   Text(
                                     'Delete all',
-                                    style: GoogleFonts.poppins(
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
                                         fontSize: 15,
                                         color: const Color.fromRGBO(
                                             109, 109, 109, 1)),
@@ -261,14 +277,16 @@ class _Register2State extends State<Register2> {
                         //           children: [
                         //             Text(
                         //               'Graphic Designing',
-                        //               style: GoogleFonts.poppins(
+                        //               style: TextStyle(                      fontFamily: 'Poppins',
+
                         //                   fontSize: 15,
                         //                   fontWeight: FontWeight.bold),
                         //             ),
                         //             SizedBox(height: 3),
                         //             Text(
                         //               'Logo Designing',
-                        //               style: GoogleFonts.poppins(
+                        //               style: TextStyle(                      fontFamily: 'Poppins',
+
                         //                 fontSize: 12,
                         //               ),
                         //             ),
@@ -292,7 +310,8 @@ class _Register2State extends State<Register2> {
                         //                     vertical: 5, horizontal: 12.0),
                         //                 child: Text(
                         //                   'Add Price',
-                        //                   style: GoogleFonts.poppins(
+                        //                   style: TextStyle(                      fontFamily: 'Poppins',
+
                         //                       color: Colors.white),
                         //                 ),
                         //               ),
@@ -311,8 +330,10 @@ class _Register2State extends State<Register2> {
                     SizedBox(height: 20),
                     Text(
                       'Work Experience',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600, fontSize: 21),
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 21),
                     ),
                     SizedBox(height: 10),
                     SingleChildScrollView(
@@ -330,8 +351,9 @@ class _Register2State extends State<Register2> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   '0-1 Year',
-                                  style:
-                                      GoogleFonts.poppins(color: Colors.black),
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
@@ -347,8 +369,9 @@ class _Register2State extends State<Register2> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   '0-1 Year',
-                                  style:
-                                      GoogleFonts.poppins(color: Colors.black),
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
@@ -364,8 +387,9 @@ class _Register2State extends State<Register2> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   '2-3 Years',
-                                  style:
-                                      GoogleFonts.poppins(color: Colors.black),
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
@@ -381,8 +405,9 @@ class _Register2State extends State<Register2> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   '3-5 Years',
-                                  style:
-                                      GoogleFonts.poppins(color: Colors.black),
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.black),
                                 ),
                               ),
                             ),
@@ -396,8 +421,10 @@ class _Register2State extends State<Register2> {
                       children: [
                         Text(
                           'Certification',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600, fontSize: 21),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 21),
                         ),
                         TextButton(
                           onPressed: () {
@@ -435,7 +462,8 @@ class _Register2State extends State<Register2> {
                               children: [
                                 Text(
                                   'Graphic Designer',
-                                  style: GoogleFonts.poppins(
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
@@ -443,12 +471,16 @@ class _Register2State extends State<Register2> {
                                 SizedBox(height: 5),
                                 Text(
                                   'Microsoft',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 2),
                                 Text(
                                   'Issued 10-03-2013',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 5),
                                 Container(
@@ -468,7 +500,8 @@ class _Register2State extends State<Register2> {
                                           children: [
                                             Text(
                                               'View Credentials  ',
-                                              style: GoogleFonts.poppins(
+                                              style: TextStyle(
+                                                fontFamily: 'Poppins',
                                                 color: Colors.black,
                                               ),
                                             ),
@@ -507,7 +540,8 @@ class _Register2State extends State<Register2> {
                               children: [
                                 Text(
                                   'Graphic Designer',
-                                  style: GoogleFonts.poppins(
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
@@ -515,12 +549,16 @@ class _Register2State extends State<Register2> {
                                 SizedBox(height: 5),
                                 Text(
                                   'Microsoft',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 2),
                                 Text(
                                   'Issued 10-03-2013',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 5),
                                 Container(
@@ -540,7 +578,8 @@ class _Register2State extends State<Register2> {
                                           children: [
                                             Text(
                                               'View Credentials  ',
-                                              style: GoogleFonts.poppins(
+                                              style: TextStyle(
+                                                fontFamily: 'Poppins',
                                                 color: Colors.black,
                                               ),
                                             ),
@@ -579,7 +618,8 @@ class _Register2State extends State<Register2> {
                               children: [
                                 Text(
                                   'Graphic Designer',
-                                  style: GoogleFonts.poppins(
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
@@ -587,12 +627,16 @@ class _Register2State extends State<Register2> {
                                 SizedBox(height: 5),
                                 Text(
                                   'Microsoft',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 2),
                                 Text(
                                   'Issued 10-03-2013',
-                                  style: GoogleFonts.poppins(),
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                  ),
                                 ),
                                 SizedBox(height: 5),
                                 Container(
@@ -612,7 +656,8 @@ class _Register2State extends State<Register2> {
                                           children: [
                                             Text(
                                               'View Credentials  ',
-                                              style: GoogleFonts.poppins(
+                                              style: TextStyle(
+                                                fontFamily: 'Poppins',
                                                 color: Colors.black,
                                               ),
                                             ),
@@ -655,8 +700,10 @@ class _Register2State extends State<Register2> {
                       children: [
                         Text(
                           'Rewards',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600, fontSize: 21),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 21),
                         ),
                         TextButton(
                           onPressed: () {},
@@ -687,8 +734,10 @@ class _Register2State extends State<Register2> {
                       children: [
                         Text(
                           'Portfolio',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600, fontSize: 21),
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 21),
                         ),
                         TextButton(
                           onPressed: () {},
@@ -729,7 +778,8 @@ class _Register2State extends State<Register2> {
                         child: Center(
                           child: Text(
                             'Save & Next',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
@@ -743,13 +793,16 @@ class _Register2State extends State<Register2> {
                       children: [
                         Text(
                           'Already have a account?',
-                          style: GoogleFonts.poppins(),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                          ),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: Text(
                             'Login',
-                            style: GoogleFonts.poppins(color: Colors.red),
+                            style: TextStyle(
+                                fontFamily: 'Poppins', color: Colors.red),
                           ),
                         ),
                       ],

@@ -6,7 +6,6 @@ import 'package:design4you/login/loginwithOtp/countrycode.dart';
 import 'package:design4you/login/loginwithOtp/otp_verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:dio/dio.dart';
 
 //initialize dio http client
@@ -20,8 +19,9 @@ class LoginWithOTP extends StatefulWidget {
 }
 
 class _LoginWithOTPState extends State<LoginWithOTP> {
-  //aaa
+  //initialize countrycode list with null list
   List<Countrycode> countrycode = [];
+  //giving default value to dropdown value so that by deafult India is chosen.
   final Countrycode dropdownvalue = Countrycode('India', '+91');
 
   @override
@@ -30,6 +30,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
     super.initState();
   }
 
+// load countries name and telephone code from json and add in countrycode list
   void fetchCountryCode() async {
     String jsonString = await rootBundle.loadString('assets/CountryCodes.json');
     final jsonResponse = json.decode(jsonString);
@@ -40,6 +41,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
     });
   }
 
+//send otp to mobile and get otp as response
   void reqOTP() async {
     var mobile = dropdownvalue.code + phoneNumberController.text.trim();
     try {
@@ -49,28 +51,15 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
       );
       print(response.data['OTP']);
       var otp = response.data['OTP'];
-
-      // if (response.statusCode == 200) {
-      //   Get.offAll(VerifyOTP(
-      //     OtpfromServer: otp,
-      //     mobile: mobile,
-      //   ));
-      // }
       Get.offAll(VerifyOTP(
         OtpfromServer: otp,
         mobile: mobile,
       ));
-    } catch (e) {
-      print(e);
-      //delete this after testing
-      Get.offAll(VerifyOTP(
-        OtpfromServer: "1234",
-        mobile: mobile,
-      ));
-    }
+    } catch (e) {}
   }
 
   var phoneNumberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;
@@ -79,6 +68,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
 
     Countrycode defaultCountryCode =
         countrycode[97]; // Set your default country code here
+
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -96,7 +86,8 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
               margin: const EdgeInsets.only(left: 20),
               child: Text(
                 'Welcome to ',
-                style: GoogleFonts.poppins(
+                style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.white,
                     fontSize: mQWidth / 15,
                     fontWeight: FontWeight.bold),
@@ -106,7 +97,8 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
               margin: const EdgeInsets.only(left: 20),
               child: Text(
                 'Design for you ',
-                style: GoogleFonts.poppins(
+                style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.white,
                     fontSize: mQWidth / 11,
                     fontWeight: FontWeight.bold),
@@ -158,7 +150,10 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           menuMaxHeight: 500,
                           hint: Text(
                             'Select Country code',
-                            style: GoogleFonts.poppins(color: Colors.white),
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.white,
+                            ),
                           ),
                           dropdownColor: const Color.fromARGB(141, 70, 70, 70),
                           items: countrycode.map((item) {
@@ -170,12 +165,14 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                                       horizontal: 20),
                                   child: AutoSizeText(
                                     item.name,
-                                    style: GoogleFonts.poppins(
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
                                         color: Colors.white),
                                   )),
                             );
                           }).toList(),
                           onChanged: (value) {
+                            //get dropdown's input and gives code for selected country.
                             print(value!.code);
                           },
                         ),
@@ -231,7 +228,8 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           child: Center(
                             child: Text(
                               'Request OTP',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),

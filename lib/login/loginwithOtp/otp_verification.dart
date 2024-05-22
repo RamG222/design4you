@@ -3,10 +3,10 @@ import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 class VerifyOTP extends StatefulWidget {
+  //get mobile number from user and otp from server.
   VerifyOTP({super.key, required this.OtpfromServer, required this.mobile});
 
   String OtpfromServer;
@@ -30,32 +30,16 @@ class _VerifyOTPState extends State<VerifyOTP> {
     super.initState();
   }
 
-  @override
-  void dispose() {
-    SmsAutoFill().unregisterListener();
-    super.dispose();
-  }
+//function for autofill otp (doesn't require sms permissions)
 
   void otpAutoFill() async {
     await SmsAutoFill().listenForCode();
+
     SmsAutoFill().code.listen((code) {
       autoFillOtp = code;
     });
 
-    // showDialog(
-    //   context: context,
-    //   builder: (context) {
-    //     return Center(
-    //       child: Image.asset(
-    //         'assets/images/loader.gif',
-    //         width: double.infinity / 2,
-    //       ),
-    //     );
-    //   },
-    // );
-    await Future.delayed(const Duration(seconds: 2));
-
-    if (autoFillOtp == widget.OtpfromServer || enteredOtp == "1234") {
+    if (autoFillOtp == widget.OtpfromServer) {
       // navigate to next screen
       Get.offAll(const Homepage());
     }
@@ -100,8 +84,16 @@ class _VerifyOTPState extends State<VerifyOTP> {
     } else {
       Get.snackbar('Wrong OTP', "Enter Correct OTP to proceed",
           backgroundColor: const Color.fromARGB(168, 255, 255, 255));
-      Navigator.of(context).pop();
+      //navigate back for closing dialog
+      Get.back();
     }
+  }
+
+// dispose listener for autofill otp.
+  @override
+  void dispose() {
+    SmsAutoFill().unregisterListener();
+    super.dispose();
   }
 
   @override
@@ -115,7 +107,9 @@ class _VerifyOTPState extends State<VerifyOTP> {
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             //back to entering mobile number
-            Get.offAll(() => LoginWithOTP());
+            Get.offAll(
+              () => LoginWithOTP(),
+            );
           },
         ),
         backgroundColor: Colors.transparent,
@@ -138,7 +132,8 @@ class _VerifyOTPState extends State<VerifyOTP> {
             ),
             Text(
               'OTP Verification',
-              style: GoogleFonts.poppins(
+              style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: Colors.white,
                   fontSize: mQWidth / 12,
                   fontWeight: FontWeight.bold),
@@ -149,8 +144,9 @@ class _VerifyOTPState extends State<VerifyOTP> {
             SizedBox(
               width: mQWidth / 1.2,
               child: Text(
-                'Please enter the OTP to verify your phone number:  ******2210',
-                style: GoogleFonts.poppins(
+                'Please enter the OTP to verify your phone number:  ******$widget',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: Colors.white,
                   fontSize: mQWidth / 24,
                 ),
@@ -172,8 +168,10 @@ class _VerifyOTPState extends State<VerifyOTP> {
                 borderRadius: BorderRadius.circular(10),
                 keyboardType: TextInputType.number,
                 clearText: true,
-                textStyle: GoogleFonts.poppins(
-                    fontSize: 16, fontWeight: FontWeight.bold),
+                textStyle: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
                 onSubmit: (value) {
                   onSubmitButtonClick(value: value, mQWidth: mQWidth);
                 },
@@ -185,7 +183,8 @@ class _VerifyOTPState extends State<VerifyOTP> {
               children: [
                 Text(
                   'Didn\'t receive OTP?',
-                  style: GoogleFonts.poppins(
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.white,
                     fontSize: mQWidth / 24,
                   ),
@@ -201,7 +200,8 @@ class _VerifyOTPState extends State<VerifyOTP> {
                         },
                         child: Text(
                           'RESEND OTP',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.red,
                             fontSize: mQWidth / 24,
                             fontWeight: FontWeight.bold,
@@ -212,7 +212,8 @@ class _VerifyOTPState extends State<VerifyOTP> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Resend OTP will enable in $counter',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
                           ),

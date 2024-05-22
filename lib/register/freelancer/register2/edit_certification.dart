@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class EditCertification extends StatefulWidget {
@@ -28,8 +27,10 @@ class _EditCertificationState extends State<EditCertification> {
               SizedBox(height: mQHeight / 15),
               Text(
                 'Edit Certification',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w600, fontSize: 21),
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 21),
               ),
               SizedBox(height: 20),
               TextField(
@@ -43,8 +44,10 @@ class _EditCertificationState extends State<EditCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Certification Name',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -59,8 +62,10 @@ class _EditCertificationState extends State<EditCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Issuinng Organization',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -80,8 +85,10 @@ class _EditCertificationState extends State<EditCertification> {
                     children: [
                       Text(
                         'Issue Date',
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontSize: 15),
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                            fontSize: 15),
                       ),
                       IconButton(
                         onPressed: () {
@@ -129,8 +136,10 @@ class _EditCertificationState extends State<EditCertification> {
                     children: [
                       Text(
                         'Expiry Date',
-                        style: GoogleFonts.poppins(
-                            color: Colors.black, fontSize: 15),
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                            fontSize: 15),
                       ),
                       IconButton(
                         onPressed: () {
@@ -174,7 +183,8 @@ class _EditCertificationState extends State<EditCertification> {
                       }),
                   Text(
                     'Does not expire',
-                    style: GoogleFonts.poppins(
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
                         color: Color.fromRGBO(156, 156, 156, 1)),
                   ),
                 ],
@@ -191,8 +201,10 @@ class _EditCertificationState extends State<EditCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Credential ID',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: 20),
@@ -207,8 +219,10 @@ class _EditCertificationState extends State<EditCertification> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   labelText: 'Credential URL',
-                  labelStyle: GoogleFonts.poppins(color: Colors.black),
-                  hintStyle: GoogleFonts.poppins(color: Colors.black),
+                  labelStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
+                  hintStyle:
+                      TextStyle(fontFamily: 'Poppins', color: Colors.black),
                 ),
               ),
               SizedBox(height: mQHeight / 10),
@@ -236,7 +250,8 @@ class _EditCertificationState extends State<EditCertification> {
                                           horizontal: 20),
                                       child: Text(
                                         'Delete Certification',
-                                        style: GoogleFonts.poppins(
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
                                             fontWeight: FontWeight.w600,
                                             fontSize: 21),
                                       ),
@@ -247,8 +262,9 @@ class _EditCertificationState extends State<EditCertification> {
                                           horizontal: 20),
                                       child: Text(
                                         'Are you sure you want to delete .this. certificate',
-                                        style:
-                                            GoogleFonts.poppins(fontSize: 15),
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 15),
                                       ),
                                     ),
                                     SizedBox(height: 20),
@@ -265,7 +281,8 @@ class _EditCertificationState extends State<EditCertification> {
                                             },
                                             child: Text(
                                               'No Thanks',
-                                              style: GoogleFonts.poppins(
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
                                                   color: Colors.black),
                                             ),
                                           ),
@@ -281,7 +298,8 @@ class _EditCertificationState extends State<EditCertification> {
                                             child: Center(
                                               child: Text(
                                                 'Delete',
-                                                style: GoogleFonts.poppins(
+                                                style: TextStyle(
+                                                  fontFamily: 'Poppins',
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -298,7 +316,8 @@ class _EditCertificationState extends State<EditCertification> {
                       },
                       child: Text(
                         'Delete Certificate',
-                        style: GoogleFonts.poppins(
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.black,
                         ),
                       ),
@@ -318,7 +337,8 @@ class _EditCertificationState extends State<EditCertification> {
                       child: Center(
                         child: Text(
                           'Update',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
