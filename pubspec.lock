@@ -45,10 +45,10 @@ packages:
     dependency: transitive
     description:
       name: camera_android_camerax
-      sha256: a2aac9505259a86d5eb6b0a14116b9a64f34a4735009f47731e59834218a5a29
+      sha256: "59967e6d80df9d682a33b86f228cc524e6b52d6184b84f6ac62151dd98bd1ea0"
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.5+1"
+    version: "0.6.5+2"
   camera_avfoundation:
     dependency: transitive
     description:
@@ -204,10 +204,10 @@ packages:
     dependency: transitive
     description:
       name: intl
-      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.1"
+    version: "0.19.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -449,18 +449,18 @@ packages:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-      sha256: "6c534bb282e1429ac082354ace1b7c6d4496a258e62c948b7ca2b52acca8a514"
+      sha256: "63108a33f9b0d89f7b6b56cce908b8e519fe433dbbe0efcf41ad3e8bb2081bd9"
       url: "https://pub.dev"
     source: hosted
-    version: "25.2.3"
+    version: "25.2.5"
   syncfusion_flutter_datepicker:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_datepicker
-      sha256: "50c8d4b5029313a1774f85a71a49319a840dc8fb12096ae041b20da4fbb9e58a"
+      sha256: c2bda86a6137a64168584a36959bad9141cc9305f274b2a15f233074b92700a4
       url: "https://pub.dev"
     source: hosted
-    version: "25.2.3"
+    version: "25.2.5"
   term_glyph:
     dependency: transitive
     description:
@@ -521,10 +521,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "0eaf06e3446824099858367950a813472af675116bf63f008a4c2a75ae13e9cb"
+      sha256: a79dbe579cb51ecd6d30b17e0cae4e0ea15e2c0e66f69ad4198f22a6789e94f4
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.0"
+    version: "5.5.1"
   xdg_directories:
     dependency: transitive
     description:
@@ -534,5 +534,5 @@ packages:
     source: hosted
     version: "1.0.4"
 sdks:
-  dart: ">=3.3.4 <4.0.0"
+  dart: ">=3.4.0 <4.0.0"
   flutter: ">=3.18.0-18.0.pre.54"

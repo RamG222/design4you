@@ -1,7 +1,8 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/register/freelancer/video_interview.dart';
-import 'package:design4you/splash_screen.dart';
+import 'package:design4you/homepage.dart';
+import 'package:design4you/register/freelancer/register1/register1.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 //Global Variable for access variable outside dart file.
@@ -12,6 +13,9 @@ Future<void> main() async {
 
   ///initialize camera
   cameras = await availableCameras();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(MyApp());
 }
 
@@ -26,7 +30,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       //navigates to splash screen
-      home: VideoInterview(),
+      home: Register1(),
     );
   }
 }

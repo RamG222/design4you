@@ -1,4 +1,5 @@
 import 'package:design4you/homepage.dart';
+import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
@@ -101,129 +102,257 @@ class _VerifyOTPState extends State<VerifyOTP> {
     var mQSize = MediaQuery.of(context).size;
     var mQWidth = mQSize.width;
     var mQHeight = mQSize.height;
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            //back to entering mobile number
-            Get.offAll(
-              () => LoginWithOTP(),
-            );
-          },
+
+    if (isWideScreen(context)) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              //back to entering mobile number
+              Get.offAll(
+                () => LoginWithOTP(),
+              );
+            },
+          ),
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.white,
         ),
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.white,
-      ),
-      extendBodyBehindAppBar: true,
-      resizeToAvoidBottomInset: false,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/backgroud.jpg'),
-              fit: BoxFit.cover),
-        ),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 200,
-            ),
-            Text(
-              'OTP Verification',
-              style: TextStyle(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontSize: mQWidth / 12,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            SizedBox(
-              width: mQWidth / 1.2,
-              child: Text(
-                'Please enter the OTP to verify your phone number:  ******$widget',
+        extendBodyBehindAppBar: true,
+        resizeToAvoidBottomInset: false,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/backgroud.jpg'),
+                fit: BoxFit.cover),
+          ),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 200,
+              ),
+              Text(
+                'OTP Verification',
                 style: TextStyle(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontSize: mQWidth / 24,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(height: 30),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 40),
-              child: OtpTextField(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                showFieldAsBox: true,
-                fieldWidth: mQWidth / 6.5,
-                fillColor: const Color.fromARGB(164, 255, 255, 255),
-                filled: true,
-                cursorColor: Colors.black,
-                borderColor: Colors.white,
-                focusedBorderColor: const Color.fromARGB(255, 168, 166, 166),
-                borderRadius: BorderRadius.circular(10),
-                keyboardType: TextInputType.number,
-                clearText: true,
-                textStyle: TextStyle(
                     fontFamily: 'Poppins',
-                    fontSize: 16,
+                    color: Colors.white,
+                    fontSize: mQWidth / 15,
                     fontWeight: FontWeight.bold),
-                onSubmit: (value) {
-                  onSubmitButtonClick(value: value, mQWidth: mQWidth);
-                },
               ),
-            ),
-            const SizedBox(height: 80),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Didn\'t receive OTP?',
+              const SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                width: mQWidth / 1.2,
+                child: Text(
+                  'Please enter the OTP to verify your phone number: ${widget.mobile}',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: mQWidth / 30,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(height: 30),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: mQWidth / 4),
+                child: OtpTextField(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  showFieldAsBox: true,
+                  fieldWidth: mQWidth / 10,
+                  fillColor: const Color.fromARGB(164, 255, 255, 255),
+                  filled: true,
+                  cursorColor: Colors.black,
+                  borderColor: Colors.white,
+                  focusedBorderColor: const Color.fromARGB(255, 168, 166, 166),
+                  borderRadius: BorderRadius.circular(10),
+                  keyboardType: TextInputType.number,
+                  clearText: true,
+                  textStyle: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                  onSubmit: (value) {
+                    onSubmitButtonClick(value: value, mQWidth: mQWidth);
+                  },
+                ),
+              ),
+              const SizedBox(height: 80),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Didn\'t receive OTP?',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: mQWidth / 30,
+                    ),
+                  ),
+                  canResendOTP
+                      ? TextButton(
+                          onPressed: () {
+                            setState(() {
+                              counter = 30;
+                              canResendOTP = false;
+                              enableResendOTP();
+                            });
+                          },
+                          child: Text(
+                            'RESEND OTP',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.red,
+                              fontSize: mQWidth / 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      : Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Resend OTP will enable in $counter',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+    } else {
+      return Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              //back to entering mobile number
+              Get.offAll(
+                () => LoginWithOTP(),
+              );
+            },
+          ),
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.white,
+        ),
+        extendBodyBehindAppBar: true,
+        resizeToAvoidBottomInset: false,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/backgroud.jpg'),
+                fit: BoxFit.cover),
+          ),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 200,
+              ),
+              Text(
+                'OTP Verification',
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: mQWidth / 12,
+                    fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                width: mQWidth / 1.2,
+                child: Text(
+                  'Please enter the OTP to verify your phone number:  ******$widget',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     color: Colors.white,
                     fontSize: mQWidth / 24,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-                canResendOTP
-                    ? TextButton(
-                        onPressed: () {
-                          setState(() {
-                            counter = 30;
-                            canResendOTP = false;
-                            enableResendOTP();
-                          });
-                        },
-                        child: Text(
-                          'RESEND OTP',
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.red,
-                            fontSize: mQWidth / 24,
-                            fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(height: 30),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                child: OtpTextField(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  showFieldAsBox: true,
+                  fieldWidth: mQWidth / 6.5,
+                  fillColor: const Color.fromARGB(164, 255, 255, 255),
+                  filled: true,
+                  cursorColor: Colors.black,
+                  borderColor: Colors.white,
+                  focusedBorderColor: const Color.fromARGB(255, 168, 166, 166),
+                  borderRadius: BorderRadius.circular(10),
+                  keyboardType: TextInputType.number,
+                  clearText: true,
+                  textStyle: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                  onSubmit: (value) {
+                    onSubmitButtonClick(value: value, mQWidth: mQWidth);
+                  },
+                ),
+              ),
+              const SizedBox(height: 80),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Didn\'t receive OTP?',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: mQWidth / 24,
+                    ),
+                  ),
+                  canResendOTP
+                      ? TextButton(
+                          onPressed: () {
+                            setState(() {
+                              counter = 30;
+                              canResendOTP = false;
+                              enableResendOTP();
+                            });
+                          },
+                          child: Text(
+                            'RESEND OTP',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.red,
+                              fontSize: mQWidth / 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      : Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Resend OTP will enable in $counter',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Resend OTP will enable in $counter',
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    }
   }
 }

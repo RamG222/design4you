@@ -51,7 +51,6 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   bool checked = false;
-
   @override
   Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;

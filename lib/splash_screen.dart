@@ -1,4 +1,6 @@
+import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
+import 'package:design4you/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,13 +21,21 @@ class SplashScreen extends StatelessWidget {
 
     return Scaffold(
       //load splash screen image (gif)
-      body: Image.asset(
-        'assets/images/ss.gif',
-        width: double.infinity,
-        height: double.infinity,
-        fit: BoxFit.cover,
-        alignment: Alignment.center,
-      ),
+      body: isWideScreen(context)
+          ? Image.asset(
+              'assets/images/ss.gif',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+            )
+          : Image.asset(
+              'assets/images/ss.gif',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+            ),
     );
   }
 }
