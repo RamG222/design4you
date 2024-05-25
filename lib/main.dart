@@ -1,5 +1,4 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/homepage.dart';
 import 'package:design4you/register/freelancer/register1/register1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
