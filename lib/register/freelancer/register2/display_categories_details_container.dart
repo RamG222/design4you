@@ -96,6 +96,7 @@ class _DisplayCategoriesDetailsContainerState
                         padding:
                             EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
                           color: Colors.red,
                         ),
                         child: Text(

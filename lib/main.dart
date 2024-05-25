@@ -1,5 +1,5 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/register/freelancer/register1/register1.dart';
+import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -28,8 +28,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(fontFamily: 'Poppins'),
       //navigates to splash screen
-      home: Register1(),
+      home: SplashScreen(),
     );
   }
 }

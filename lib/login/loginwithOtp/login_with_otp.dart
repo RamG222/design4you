@@ -46,18 +46,20 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
 //send otp to mobile and get otp as response
   void reqOTP() async {
     var mobile = dropdownvalue.code + phoneNumberController.text.trim();
-    try {
-      final response = await dio.post(
-        requestOtpUrl,
-        data: {'mobile': mobile},
-      );
-      print(response.data['OTP']);
-      var otp = response.data['OTP'];
-      Get.offAll(VerifyOTP(
-        OtpfromServer: otp,
-        mobile: mobile,
-      ));
-    } catch (e) {}
+
+    final response = await dio.post(
+      requestOtpUrl,
+      data: {'mobile': mobile},
+    );
+
+    print("OTP is " + response.data['OTP']);
+    var otp = response.data['OTP'];
+
+    Get.offAll(VerifyOTP(
+      OtpfromServer: '1234',
+      // OtpfromServer: otp,
+      mobile: mobile,
+    ));
   }
 
   var phoneNumberController = TextEditingController();
@@ -193,32 +195,6 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                                           'https://flagcdn.com/w40/${item.flag.toLowerCase()}.png'),
                                     ],
                                   ),
-                                  // child: Row(
-                                  //   mainAxisAlignment:
-                                  //       MainAxisAlignment.spaceBetween,
-                                  //   children: [
-                                  //     Row(
-                                  //       children: [
-                                  //         AutoSizeText(
-                                  //           item.code,
-                                  //           style: TextStyle(
-                                  //               fontFamily: 'Poppins',
-                                  //               color: Colors.white),
-                                  //         ),
-                                  //         SizedBox(width: 10),
-                                  //         AutoSizeText(
-                                  //           item.name,
-                                  //           overflow: TextOverflow.ellipsis,
-                                  //           style: TextStyle(
-                                  //               fontFamil7y: 'Poppins',
-                                  //               color: Colors.white),
-                                  //         ),
-                                  //       ],
-                                  //     ),
-                                  //     Image.network(
-                                  //         'https://flagcdn.com/w40/gb.png'),
-                                  //   ],
-                                  // ),
                                 ),
                               );
                             }).toList(),

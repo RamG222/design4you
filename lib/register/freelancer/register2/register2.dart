@@ -1,7 +1,9 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
+import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/register/freelancer/register2/add_certification.dart';
 import 'package:design4you/register/freelancer/register2/display_categories_details_container.dart';
 import 'package:design4you/register/freelancer/register2/edit_certification.dart';
+import 'package:design4you/register/freelancer/register2/tablet/display_categories_details_container_tablet.dart';
 import 'package:design4you/register/freelancer/register3/register3.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -78,13 +80,17 @@ class _Register2State extends State<Register2> {
                           ),
                         ],
                       ),
-                      const SizedBox(width: 20),
+                      isWideScreen(context)
+                          ? const SizedBox(width: 30)
+                          : const SizedBox(width: 20),
                       Container(
                         width: 20,
                         height: 1,
                         color: const Color.fromRGBO(109, 109, 109, 1),
                       ),
-                      const SizedBox(width: 20),
+                      isWideScreen(context)
+                          ? const SizedBox(width: 30)
+                          : const SizedBox(width: 20),
                       Column(
                         children: [
                           Container(
@@ -120,13 +126,17 @@ class _Register2State extends State<Register2> {
                           ),
                         ],
                       ),
-                      const SizedBox(width: 20),
+                      isWideScreen(context)
+                          ? const SizedBox(width: 30)
+                          : const SizedBox(width: 20),
                       Container(
                         width: 20,
                         height: 1,
                         color: const Color.fromRGBO(109, 109, 109, 1),
                       ),
-                      const SizedBox(width: 20),
+                      isWideScreen(context)
+                          ? const SizedBox(width: 30)
+                          : const SizedBox(width: 20),
                       Column(
                         children: [
                           Container(
@@ -174,57 +184,130 @@ class _Register2State extends State<Register2> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Skills',
-                      style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
-                          fontSize: 21),
-                    ),
-                    const SizedBox(height: 20),
-                    Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color.fromRGBO(238, 240, 243, 1),
+                    isWideScreen(context)
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Skills',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 21),
+                              ),
+                              const SizedBox(height: 20),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 60,
+                                    width: mQWidth / 2.3,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: const Color.fromRGBO(
+                                              238, 240, 243, 1),
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: CustomDropdown(
+                                      hintText: 'Category',
+                                      decoration: CustomDropdownDecoration(
+                                          hintStyle: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.black,
+                                      )),
+                                      items: categories,
+                                      onChanged: (value) {
+                                        value = '';
+                                      },
+                                    ),
+                                  ),
+                                  SizedBox(width: 20),
+                                  Container(
+                                    height: 60,
+                                    width: mQWidth / 2.3,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: const Color.fromRGBO(
+                                              238, 240, 243, 1),
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: Center(
+                                        child: CustomDropdown.multiSelect(
+                                      hintText: 'Sub Category',
+                                      items: subCategories,
+                                      decoration: CustomDropdownDecoration(
+                                          hintStyle: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.black,
+                                      )),
+                                      onListChanged: (value) {
+                                        print(value);
+                                        value.clear();
+                                      },
+                                    )),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )
+                        : Column(
+                            children: [
+                              Text(
+                                'Skills',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 21),
+                              ),
+                              const SizedBox(height: 20),
+                              Container(
+                                height: 60,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: const Color.fromRGBO(
+                                          238, 240, 243, 1),
+                                    ),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: CustomDropdown(
+                                  hintText: 'Category',
+                                  decoration: CustomDropdownDecoration(
+                                      hintStyle: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  )),
+                                  items: categories,
+                                  onChanged: (value) {
+                                    value = '';
+                                  },
+                                ),
+                              ),
+                              const SizedBox(height: 20),
+                              Container(
+                                height: 60,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: const Color.fromRGBO(
+                                          238, 240, 243, 1),
+                                    ),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                    child: CustomDropdown.multiSelect(
+                                  hintText: 'Sub Category',
+                                  items: subCategories,
+                                  decoration: CustomDropdownDecoration(
+                                      hintStyle: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  )),
+                                  onListChanged: (value) {
+                                    print(value);
+                                    value.clear();
+                                  },
+                                )),
+                              ),
+                            ],
                           ),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: CustomDropdown(
-                        hintText: 'Category',
-                        decoration: CustomDropdownDecoration(
-                            hintStyle: TextStyle(
-                          fontFamily: 'Poppins',
-                          color: Colors.black,
-                        )),
-                        items: categories,
-                        onChanged: (value) {
-                          value = '';
-                        },
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color.fromRGBO(238, 240, 243, 1),
-                          ),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                          child: CustomDropdown.multiSelect(
-                        hintText: 'Sub Category',
-                        items: subCategories,
-                        decoration: CustomDropdownDecoration(
-                            hintStyle: TextStyle(
-                          fontFamily: 'Poppins',
-                          color: Colors.black,
-                        )),
-                        onListChanged: (value) {
-                          print(value);
-                          value.clear();
-                        },
-                      )),
-                    ),
                     const SizedBox(height: 20),
                     Column(
                       children: [
@@ -257,74 +340,10 @@ class _Register2State extends State<Register2> {
                             ),
                           ],
                         ),
+                        isWideScreen(context)
+                            ? DisplayCategoriesDetailsContainerTablet()
+                            : DisplayCategoriesDetailsContainer(),
                         SizedBox(height: 20),
-                        DisplayCategoriesDetailsContainer(),
-                        SizedBox(height: 20),
-                        // Container(
-                        //   height: 60,
-                        //   decoration: BoxDecoration(
-                        //       borderRadius: BorderRadius.circular(10),
-                        //       color: Color.fromRGBO(247, 247, 247, 1),
-                        //       border: Border.all(
-                        //           color: Color.fromRGBO(238, 240, 243, 1))),
-                        //   child: Row(
-                        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //     children: [
-                        //       Container(
-                        //         margin: EdgeInsets.only(left: 12, top: 8),
-                        //         child: Column(
-                        //           crossAxisAlignment: CrossAxisAlignment.start,
-                        //           children: [
-                        //             Text(
-                        //               'Graphic Designing',
-                        //               style: TextStyle(                      fontFamily: 'Poppins',
-
-                        //                   fontSize: 15,
-                        //                   fontWeight: FontWeight.bold),
-                        //             ),
-                        //             SizedBox(height: 3),
-                        //             Text(
-                        //               'Logo Designing',
-                        //               style: TextStyle(                      fontFamily: 'Poppins',
-
-                        //                 fontSize: 12,
-                        //               ),
-                        //             ),
-                        //           ],
-                        //         ),
-                        //       ),
-                        //       Row(
-                        //         mainAxisAlignment:
-                        //             MainAxisAlignment.spaceAround,
-                        //         children: [
-                        //           TextButton(
-                        //             onPressed: () {},
-                        //             child: Container(
-                        //               decoration: BoxDecoration(
-                        //                 borderRadius:
-                        //                     BorderRadiusDirectional.circular(4),
-                        //                 color: Colors.red,
-                        //               ),
-                        //               child: Padding(
-                        //                 padding: const EdgeInsets.symmetric(
-                        //                     vertical: 5, horizontal: 12.0),
-                        //                 child: Text(
-                        //                   'Add Price',
-                        //                   style: TextStyle(                      fontFamily: 'Poppins',
-
-                        //                       color: Colors.white),
-                        //                 ),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //           IconButton(
-                        //               onPressed: () {},
-                        //               icon: Icon(Icons.delete_outline_rounded))
-                        //         ],
-                        //       ),
-                        //     ],
-                        //   ),
-                        // ),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -451,249 +470,180 @@ class _Register2State extends State<Register2> {
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromRGBO(242, 242, 242, 0.5),
+                          border: Border.all(
+                              color: Color.fromRGBO(238, 240, 243, 1))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SizedBox(width: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
                               children: [
-                                Text(
-                                  'Graphic Designer',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  'Microsoft',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 2),
-                                Text(
-                                  'Issued 10-03-2013',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Container(
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    border: Border.all(
-                                        color:
-                                            Color.fromRGBO(228, 228, 228, 1)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10),
-                                    child: InkWell(
-                                        onTap: () {},
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              'View Credentials  ',
-                                              style: TextStyle(
-                                                fontFamily: 'Poppins',
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                            Icon(
-                                              Icons.link,
-                                              color: Colors.black,
-                                            ),
-                                          ],
-                                        )),
-                                  ),
+                                SizedBox(width: 10),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Graphic Designer',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      'Microsoft',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 2),
+                                    Text(
+                                      'Issued 10-03-2013',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                  ],
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            Get.to(EditCertification());
-                          },
-                          icon: Icon(
-                            Icons.edit_outlined,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Graphic Designer',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  'Microsoft',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 2),
-                                Text(
-                                  'Issued 10-03-2013',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Container(
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    border: Border.all(
-                                        color:
-                                            Color.fromRGBO(228, 228, 228, 1)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10),
-                                    child: InkWell(
-                                        onTap: () {},
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              'View Credentials  ',
-                                              style: TextStyle(
-                                                fontFamily: 'Poppins',
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                            Icon(
-                                              Icons.link,
-                                              color: Colors.black,
-                                            ),
-                                          ],
-                                        )),
-                                  ),
-                                ),
-                              ],
+                            IconButton(
+                              onPressed: () {
+                                Get.to(EditCertification());
+                              },
+                              icon: Icon(
+                                Icons.edit_outlined,
+                                size: 25,
+                              ),
                             ),
                           ],
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            Get.to(EditCertification());
-                          },
-                          icon: Icon(
-                            Icons.edit_outlined,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Graphic Designer',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  'Microsoft',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 2),
-                                Text(
-                                  'Issued 10-03-2013',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Container(
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    border: Border.all(
-                                        color:
-                                            Color.fromRGBO(228, 228, 228, 1)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10),
-                                    child: InkWell(
-                                        onTap: () {},
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              'View Credentials  ',
-                                              style: TextStyle(
-                                                fontFamily: 'Poppins',
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                            Icon(
-                                              Icons.link,
-                                              color: Colors.black,
-                                            ),
-                                          ],
-                                        )),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            Get.to(EditCertification());
-                          },
-                          icon: Icon(
-                            Icons.edit_outlined,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Center(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'See All',
-                          style:
-                              TextStyle(color: Color.fromRGBO(0, 87, 255, 1)),
                         ),
                       ),
                     ),
+                    SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromRGBO(242, 242, 242, 0.5),
+                          border: Border.all(
+                              color: Color.fromRGBO(238, 240, 243, 1))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(width: 10),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Graphic Designer',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      'Microsoft',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 2),
+                                    Text(
+                                      'Issued 10-03-2013',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Get.to(EditCertification());
+                              },
+                              icon: Icon(
+                                Icons.edit_outlined,
+                                size: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromRGBO(242, 242, 242, 0.5),
+                          border: Border.all(
+                              color: Color.fromRGBO(238, 240, 243, 1))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(width: 10),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Graphic Designer',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      'Microsoft',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 2),
+                                    Text(
+                                      'Issued 10-03-2013',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Get.to(EditCertification());
+                              },
+                              icon: Icon(
+                                Icons.edit_outlined,
+                                size: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 18),
                     Divider(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
