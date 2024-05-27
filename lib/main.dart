@@ -12,6 +12,7 @@ Future<void> main() async {
 
   ///initialize camera
   cameras = await availableCameras();
+  //disable device rotate.
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);

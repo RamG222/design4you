@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/register/client/register.dart';
 import 'package:design4you/register/freelancer/register1/register1.dart';
@@ -93,7 +94,7 @@ class _HomepageState extends State<Homepage> {
                       },
                       child: Container(
                         width: mQWidth / 3,
-                        height: mQWidth / 3,
+                        height: mQHeight / 5.4,
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
@@ -115,12 +116,11 @@ class _HomepageState extends State<Homepage> {
                             SizedBox(
                               height: mQWidth / 50,
                             ),
-                            Text(
+                            AutoSizeText(
                               'I am A Client',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -142,7 +142,7 @@ class _HomepageState extends State<Homepage> {
                       },
                       child: Container(
                         width: mQWidth / 3,
-                        height: mQWidth / 3,
+                        height: mQHeight / 5.4,
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
@@ -164,12 +164,11 @@ class _HomepageState extends State<Homepage> {
                             SizedBox(
                               height: mQWidth / 45,
                             ),
-                            Text(
+                            AutoSizeText(
                               'I am A Freelancer',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -240,7 +239,7 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 20),
               Container(
-                height: 375,
+                height: mQHeight / 2.7,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -283,21 +282,20 @@ class _HomepageState extends State<Homepage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: mQWidth / 50,
-                            ),
-                            Text(
+                            SizedBox(height: mQWidth / 50),
+                            AutoSizeText(
                               'I am A Client',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: mQWidth / 30,
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            Text(
+                            AutoSizeText(
                               'Hiring for projects',
                               style: TextStyle(
+                                fontSize: mQWidth / 30,
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,
@@ -315,9 +313,9 @@ class _HomepageState extends State<Homepage> {
                         width: mQWidth / 2.3,
                         height: mQWidth / 2.4,
                         decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
                         child: Column(
                           children: [
                             Padding(
@@ -335,18 +333,19 @@ class _HomepageState extends State<Homepage> {
                             SizedBox(
                               height: mQWidth / 45,
                             ),
-                            Text(
+                            AutoSizeText(
                               'I am A Freelancer',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: mQWidth / 30,
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            Text(
+                            AutoSizeText(
                               'Looking for projects',
                               style: TextStyle(
+                                fontSize: mQWidth / 30,
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,

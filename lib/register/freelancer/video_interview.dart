@@ -3,9 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:camera/camera.dart';
 import 'package:design4you/register/freelancer/account_created.dart';
 import 'package:design4you/main.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gal/gal.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
@@ -40,7 +38,7 @@ class _VideoInterviewState extends State<VideoInterview> {
 
   void startRecording() async {
     Get.snackbar('Recording Start', 'After 10 seconds it will end');
-    try {
+    try { 
       await cameraValue;
       await cameraController.prepareForVideoRecording();
       await cameraController.startVideoRecording();

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:design4you/homepage.dart';
 import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
@@ -147,7 +148,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
               SizedBox(
                 width: mQWidth / 1.2,
                 child: Text(
-                  'Please enter the OTP to verify your phone number: ${widget.mobile}',
+                  'Please enter the OTP to verify your phone number: ******1234',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     color: Colors.white,
@@ -272,7 +273,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
               SizedBox(
                 width: mQWidth / 1.2,
                 child: Text(
-                  'Please enter the OTP to verify your phone number:  ******$widget',
+                  'Please enter the OTP to verify your phone number:  ******1234',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     color: Colors.white,
@@ -309,7 +310,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  AutoSizeText(
                     'Didn\'t receive OTP?',
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -338,9 +339,10 @@ class _VerifyOTPState extends State<VerifyOTP> {
                         )
                       : Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                          child: AutoSizeText(
                             'Resend OTP will enable in $counter',
                             style: TextStyle(
+                              fontSize: mQWidth / 30,
                               fontFamily: 'Poppins',
                               color: Colors.red,
                               fontWeight: FontWeight.bold,

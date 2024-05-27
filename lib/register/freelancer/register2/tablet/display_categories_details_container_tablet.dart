@@ -278,7 +278,7 @@ class _DisplayCategoriesDetailsContainerTabletState
                               _controllerAddPriceBtn.forward();
                             },
                             child: SizedBox(
-                              width: mQWidth / 2.9,
+                              width: mQWidth / 2.8,
                               child: Text(
                                 'May be later',
                                 textAlign: TextAlign.center,
@@ -302,7 +302,7 @@ class _DisplayCategoriesDetailsContainerTabletState
                           },
                           child: SizedBox(
                             height: 50,
-                            width: mQWidth / 3.2,
+                            width: mQWidth / 3,
                             child: Center(
                               child: Text(
                                 'Submit',
