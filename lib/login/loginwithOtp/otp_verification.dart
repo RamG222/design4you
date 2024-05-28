@@ -3,6 +3,7 @@ import 'package:design4you/homepage.dart';
 import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:sms_autofill/sms_autofill.dart';
@@ -81,6 +82,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
     await Future.delayed(const Duration(seconds: 2));
 
     if (enteredOtp == widget.OtpfromServer || enteredOtp == "1234") {
+      HapticFeedback.vibrate();
       // navigate to next screen
       Get.offAll(const Homepage());
     } else {
@@ -126,8 +128,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/backgroud.jpg'),
-                fit: BoxFit.cover),
+                image: AssetImage('assets/images/02.gif'), fit: BoxFit.cover),
           ),
           child: Column(
             children: [
@@ -185,7 +186,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  AutoSizeText(
                     'Didn\'t receive OTP?',
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -251,8 +252,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/backgroud.jpg'),
-                fit: BoxFit.cover),
+                image: AssetImage('assets/images/02.gif'), fit: BoxFit.cover),
           ),
           child: Column(
             children: [
@@ -289,6 +289,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   showFieldAsBox: true,
                   fieldWidth: mQWidth / 6.5,
+                  fieldHeight: mQWidth / 6.5,
                   fillColor: const Color.fromARGB(164, 255, 255, 255),
                   filled: true,
                   cursorColor: Colors.black,
@@ -307,50 +308,53 @@ class _VerifyOTPState extends State<VerifyOTP> {
                 ),
               ),
               const SizedBox(height: 80),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AutoSizeText(
-                    'Didn\'t receive OTP?',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.white,
-                      fontSize: mQWidth / 24,
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AutoSizeText(
+                      'Didn\'t receive OTP?',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                        fontSize: mQWidth / 24,
+                      ),
                     ),
-                  ),
-                  canResendOTP
-                      ? TextButton(
-                          onPressed: () {
-                            setState(() {
-                              counter = 30;
-                              canResendOTP = false;
-                              enableResendOTP();
-                            });
-                          },
-                          child: Text(
-                            'RESEND OTP',
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Colors.red,
-                              fontSize: mQWidth / 24,
-                              fontWeight: FontWeight.bold,
+                    canResendOTP
+                        ? TextButton(
+                            onPressed: () {
+                              setState(() {
+                                counter = 30;
+                                canResendOTP = false;
+                                enableResendOTP();
+                              });
+                            },
+                            child: AutoSizeText(
+                              'RESEND OTP',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontSize: mQWidth / 24,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        : Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: AutoSizeText(
+                              'Resend OTP will enable in $counter',
+                              style: TextStyle(
+                                fontSize: mQWidth / 30,
+                                fontFamily: 'Poppins',
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        )
-                      : Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: AutoSizeText(
-                            'Resend OTP will enable in $counter',
-                            style: TextStyle(
-                              fontSize: mQWidth / 30,
-                              fontFamily: 'Poppins',
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                ],
-              )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

@@ -27,8 +27,7 @@ class _HomepageState extends State<Homepage> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/backgroud.jpg'),
-                fit: BoxFit.cover),
+                image: AssetImage('assets/images/03.gif'),   fit: BoxFit.cover),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -94,7 +93,7 @@ class _HomepageState extends State<Homepage> {
                       },
                       child: Container(
                         width: mQWidth / 3,
-                        height: mQHeight / 5.4,
+                        height: mQHeight / 5.1,
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
@@ -113,9 +112,7 @@ class _HomepageState extends State<Homepage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: mQWidth / 50,
-                            ),
+                            SizedBox(height: mQWidth / 50),
                             AutoSizeText(
                               'I am A Client',
                               style: TextStyle(
@@ -131,6 +128,7 @@ class _HomepageState extends State<Homepage> {
                               ),
                               textAlign: TextAlign.center,
                             ),
+                            SizedBox(height: mQWidth / 50),
                           ],
                         ),
                       ),
@@ -142,7 +140,7 @@ class _HomepageState extends State<Homepage> {
                       },
                       child: Container(
                         width: mQWidth / 3,
-                        height: mQHeight / 5.4,
+                        height: mQHeight / 5.1,
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
@@ -197,8 +195,7 @@ class _HomepageState extends State<Homepage> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/backgroud.jpg'),
-                fit: BoxFit.cover),
+                image: AssetImage('assets/images/03.gif'), fit: BoxFit.cover),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,

@@ -54,58 +54,68 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
         countrycode[97]; // Set your default country code here
     if (isWideScreen(context)) {
       return Scaffold(
-        body: SingleChildScrollView(
-          child: Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/backgroud.jpg'),
-                  fit: BoxFit.cover),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 50),
-                  child: Text(
-                    'Welcome to ',
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: mQWidth / 15,
-                        fontWeight: FontWeight.bold),
-                  ),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/01.gif'), fit: BoxFit.cover),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 25,
                 ),
-                Container(
-                  margin: const EdgeInsets.only(left: 50),
-                  child: Text(
-                    'Design for you ',
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: mQWidth / 11,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                const SizedBox(height: 50),
-                Container(
-                  height: mQHeight / 2,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      colors: [
-                        Color.fromARGB(106, 255, 255, 255),
-                        Color.fromARGB(89, 255, 255, 255),
-                        Color.fromARGB(69, 255, 255, 255),
-                        Color.fromARGB(42, 0, 0, 0),
-                      ],
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        'Welcome to ',
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: mQWidth / 15,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        'Design for you ',
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: mQWidth / 11,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(height: 50),
+                  ],
+                ),
+              ),
+              Container(
+                height: mQHeight / 2,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30)),
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    colors: [
+                      Color.fromARGB(106, 255, 255, 255),
+                      Color.fromARGB(89, 255, 255, 255),
+                      Color.fromARGB(69, 255, 255, 255),
+                      Color.fromARGB(42, 0, 0, 0),
+                    ],
                   ),
+                ),
+                child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -114,9 +124,10 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.white, width: 2),
                         ),
-                        margin: const EdgeInsets.symmetric(horizontal: 50),
+                        margin: const EdgeInsets.symmetric(horizontal: 35),
                         child: Container(
                           height: 60,
+                          width: double.infinity,
                           decoration: const BoxDecoration(
                               color: Color.fromARGB(124, 255, 255, 255)),
                           child: Center(
@@ -145,7 +156,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                                 return DropdownMenuItem(
                                   value: item,
                                   child: Container(
-                                    width: mQWidth / 1.4,
+                                    width: mQWidth / 1.25,
                                     margin: const EdgeInsets.symmetric(
                                         horizontal: 20),
                                     child: Row(
@@ -193,7 +204,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.white, width: 2),
                         ),
-                        margin: const EdgeInsets.symmetric(horizontal: 50),
+                        margin: const EdgeInsets.symmetric(horizontal: 35),
                         child: Container(
                           height: 60,
                           decoration: const BoxDecoration(
@@ -220,7 +231,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                       ),
                       const SizedBox(height: 45),
                       Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 50),
+                        margin: const EdgeInsets.symmetric(horizontal: 35),
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -248,9 +259,9 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
                       )
                     ],
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         ),
       );
@@ -261,8 +272,7 @@ class _LoginWithOTPState extends State<LoginWithOTP> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/backgroud.jpg'),
-                fit: BoxFit.cover),
+                image: AssetImage('assets/images/01.gif'), fit: BoxFit.cover),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,

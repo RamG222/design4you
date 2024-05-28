@@ -340,6 +340,7 @@ class _Register2State extends State<Register2> {
                             ),
                           ],
                         ),
+                        const SizedBox(height: 20),
                         isWideScreen(context)
                             ? DisplayCategoriesDetailsContainerTablet()
                             : DisplayCategoriesDetailsContainer(),
@@ -470,6 +471,7 @@ class _Register2State extends State<Register2> {
                         )
                       ],
                     ),
+                    const SizedBox(height: 20),
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),

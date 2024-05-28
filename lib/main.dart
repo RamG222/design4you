@@ -1,4 +1,6 @@
 import 'package:camera/camera.dart';
+import 'package:design4you/homepage.dart';
+import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,9 +15,7 @@ Future<void> main() async {
   ///initialize camera
   cameras = await availableCameras();
   //disable device rotate.
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(MyApp());
 }
 
