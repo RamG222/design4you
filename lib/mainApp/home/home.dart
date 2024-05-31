@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
   int navigationIndex = 0;
   bool isSelected = false;
   @override
-    Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;
     var mQWidth = mQSize.width;
     var mQHeight = mQSize.height;
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
         ),
         margin: EdgeInsets.symmetric(horizontal: 15),
         width: double.infinity,
-        height: mQHeight / 15,
+        height: 60,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
