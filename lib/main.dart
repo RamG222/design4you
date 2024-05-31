@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/homepage.dart';
-import 'package:design4you/login/loginwithOtp/login_with_otp.dart';
+import 'package:design4you/mainApp/home/home.dart';
+import 'package:design4you/register/freelancer/register2/register2.dart';
 import 'package:design4you/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +8,6 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 //Global Variable for access variable outside dart file.
 var cameras;
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -31,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       //navigates to splash screen
-      home: SplashScreen(),
+      home: Home(),
     );
   }
 }

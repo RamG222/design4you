@@ -1,28 +1,13 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:design4you/is_widescreen.dart';
 import 'package:design4you/register/freelancer/register2/add_certification.dart';
+import 'package:design4you/register/freelancer/register2/category_list.dart';
 import 'package:design4you/register/freelancer/register2/display_categories_details_container.dart';
 import 'package:design4you/register/freelancer/register2/edit_certification.dart';
 import 'package:design4you/register/freelancer/register2/tablet/display_categories_details_container_tablet.dart';
 import 'package:design4you/register/freelancer/register3/register3.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-List<String> categories = [
-  'Graphic Design',
-  'Web Design',
-  'video Advertising',
-  'Social Media Marketing'
-];
-List<String> subCategories = [
-  'Logo Design',
-  'Flyer Design',
-  'video Advertising',
-  'Social Media Marketing'
-];
-
-String categorydropdownvalue = '';
-String subcategorydropdownvalue = '';
 
 class Register2 extends StatefulWidget {
   const Register2({super.key});
@@ -32,6 +17,117 @@ class Register2 extends StatefulWidget {
 }
 
 class _Register2State extends State<Register2> {
+  List<categoryListModel> categories = [
+    categoryListModel(
+      CategoryName: 'Print Design',
+      SubCategories: [
+        'Brochers',
+        'Flyers',
+        'Posters',
+        'Business Cards',
+        'Packaging',
+        'Stationery'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Digital Design',
+      SubCategories: [
+        'Web Design',
+        'App Design',
+        'Social Media Graphics',
+        'Email Templates',
+        'Banner Ads',
+        'Infographics'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Branding',
+      SubCategories: [
+        'Logo Design',
+        'Brand Identity',
+        'Brand Guidelines',
+        'Brand Collateral',
+        'Brand Refresh'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Typography',
+      SubCategories: [
+        'Typeface Design',
+        'Font Pairing',
+        'Lettering',
+        'Calligraphy',
+        'Typographic Layout'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Illustration',
+      SubCategories: [
+        'Digital Illustration',
+        'Vector Illustration',
+        'Editorial Illustration',
+        'Character Design',
+        'Storyboarding'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Motion Graphics',
+      SubCategories: [
+        'Animated Logos',
+        'Explainer Videos',
+        'Title Sequences',
+        'GIFs',
+        'Interactive Graphics'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Environmental Design',
+      SubCategories: [
+        'Signage',
+        'Wayfinding',
+        'Exhibition Design',
+        'Retail Displays',
+        'Environmental Graphics'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'User Interface (UI) Design',
+      SubCategories: [
+        'Interface Elements',
+        'Wireframing',
+        'Prototyping',
+        'User Experience (UX) Design',
+        'Interaction Design'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Publication Design',
+      SubCategories: [
+        'Magazine Layouts',
+        'Book Covers',
+        'Newspaper Design',
+        'Catalogs',
+        'Annual Reports'
+      ],
+    ),
+    categoryListModel(
+      CategoryName: 'Packaging Design',
+      SubCategories: [
+        'Product Packaging',
+        'Label Design',
+        'Box Design',
+        'Packaging Mockups',
+        'Packaging Dielines'
+      ],
+    ),
+  ];
+
+  late var display_cat = categories.map(
+    (e) {
+      return e.CategoryName;
+    },
+  ).toList();
+
   @override
   Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;
@@ -215,9 +311,10 @@ class _Register2State extends State<Register2> {
                                         fontFamily: 'Poppins',
                                         color: Colors.black,
                                       )),
-                                      items: categories,
+                                      items: display_cat,
                                       onChanged: (value) {
-                                        value = '';
+                                        print(value);
+                                        // value = '';
                                       },
                                     ),
                                   ),
@@ -235,7 +332,7 @@ class _Register2State extends State<Register2> {
                                     child: Center(
                                         child: CustomDropdown.multiSelect(
                                       hintText: 'Sub Category',
-                                      items: subCategories,
+                                      items: display_cat,
                                       decoration: CustomDropdownDecoration(
                                           hintStyle: TextStyle(
                                         fontFamily: 'Poppins',
@@ -276,9 +373,10 @@ class _Register2State extends State<Register2> {
                                     fontFamily: 'Poppins',
                                     color: Colors.black,
                                   )),
-                                  items: categories,
+                                  items: display_cat,
                                   onChanged: (value) {
-                                    value = '';
+                                    print(value);
+                                    // value = '';
                                   },
                                 ),
                               ),
@@ -294,7 +392,7 @@ class _Register2State extends State<Register2> {
                                 child: Center(
                                     child: CustomDropdown.multiSelect(
                                   hintText: 'Sub Category',
-                                  items: subCategories,
+                                  items: display_cat,
                                   decoration: CustomDropdownDecoration(
                                       hintStyle: TextStyle(
                                     fontFamily: 'Poppins',

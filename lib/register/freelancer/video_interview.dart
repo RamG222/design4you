@@ -38,7 +38,7 @@ class _VideoInterviewState extends State<VideoInterview> {
 
   void startRecording() async {
     Get.snackbar('Recording Start', 'After 10 seconds it will end');
-    try { 
+    try {
       await cameraValue;
       await cameraController.prepareForVideoRecording();
       await cameraController.startVideoRecording();
