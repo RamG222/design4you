@@ -1,5 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:design4you/mainApp/home/top_categories_card.dart';
+import 'package:design4you/mainApp/home/screen0/notifications.dart';
+import 'package:design4you/mainApp/home/screen0/recent.dart';
+import 'package:design4you/mainApp/home/screen0/top_categories_card.dart';
+import 'package:design4you/mainApp/home/screen0/whats_new.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +16,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int navigationIndex = 0;
   bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
     var mQSize = MediaQuery.of(context).size;
@@ -38,7 +42,11 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  navigationIndex = 0;
+                });
+              },
               child: Column(
                 children: [
                   Icon(
@@ -56,7 +64,11 @@ class _HomeState extends State<Home> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  navigationIndex = 1;
+                });
+              },
               child: Column(
                 children: [
                   Icon(
@@ -74,22 +86,30 @@ class _HomeState extends State<Home> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  navigationIndex = 2;
+                });
+              },
               child: Column(
                 children: [
                   SizedBox(height: 4),
                   Center(
                     child: Image.asset(
                       'assets/images/uparrow.png',
-                      width: mQWidth / 12,
-                      height: mQWidth / 12,
+                      width: 35,
+                      height: 35,
                     ),
                   )
                 ],
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  navigationIndex = 3;
+                });
+              },
               child: Column(
                 children: [
                   Icon(
@@ -107,15 +127,19 @@ class _HomeState extends State<Home> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  navigationIndex = 4;
+                });
+              },
               child: Column(
                 children: [
                   Icon(
-                    Icons.shopping_cart_outlined,
+                    Icons.post_add,
                     color: navigationIndex == 4 ? Colors.red : Colors.black,
                   ),
                   AutoSizeText(
-                    'Orders',
+                    'My Post',
                     style: TextStyle(
                       fontSize: mQWidth / 60,
                       color: navigationIndex == 4 ? Colors.red : Colors.black,
@@ -165,8 +189,7 @@ class _HomeState extends State<Home> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          // do something
-                          Get.snackbar('Clicked on ', 'Notification icon');
+                          Get.to(NotificationsScreen());
                         },
                         icon: Badge(
                           backgroundColor: Colors.red,
@@ -219,19 +242,64 @@ class _HomeState extends State<Home> {
               ),
               TopCategoriesCard(),
               SizedBox(height: mQHeight / 60),
-              ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                padding: EdgeInsets.all(0),
-                shrinkWrap: true,
-                itemCount: 1,
-                itemBuilder: (context, index) {
-                  return ClipRRect(
-                    borderRadius: BorderRadius.circular(7),
-                    child: Image.network(
-                        'https://s3-alpha-sig.figma.com/img/8526/c35c/36ae50b47963cdb4e49faf08f3d199a9?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HzK21R9QPM30p~MfHdJOhwPBX5LIgx3vhEHvtdP22MxVrjB0izt2~tk7Z~K5-zXADvEbmjkzluMAXlkZtqyZ0jrpEsnmt9liEF8CGfLG6WHQ6hZA3AQfGWnSBqOV8pogKLyW3WKXE0K2zvBhita2PTNpL7Xdqo3uKfiX-vPp1OyxqRutqARM9BB2b0TP8qxAOcAvM4i923pFzqXUxNbzK2cyMGOKefzK6yLJUW007oRMDSTDfezcOnUS4gHAgDxUx78oOSYQcVs2MSa5G5Wb595YiUBjLlr97D8gxP5Rw7ieLiwp3L9Vlb3uSpfdoVzc2quo4gtHvPvD7A-w61spTg__'),
-                  );
-                },
+              whatsNewWidget(),
+              Recent(),
+              Container(
+                width: double.infinity,
+                height: mQHeight / 5,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Color.fromRGBO(255, 191, 191, 0.5),
+                ),
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Invite your Friends',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                          fontSize: 22,
+                        ),
+                      ),
+                      Text(
+                        'Porem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 15,
+                        ),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          backgroundColor: Colors.red,
+                        ),
+                        onPressed: () {},
+                        child: SizedBox(
+                          height: 50,
+                          width: double.infinity,
+                          child: Center(
+                            child: Text(
+                              'Invite Friends',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
+              SizedBox(height: 100),
             ],
           ),
         ),
