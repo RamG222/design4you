@@ -1,4 +1,6 @@
+import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:design4you/mainApp/home/screen0/get_budget.dart';
 import 'package:design4you/mainApp/home/screen0/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -43,7 +45,9 @@ class _LookingForScreenState extends State<LookingForScreen> {
             Row(
               children: [
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(GetBudget());
+                    },
                     child: Text(
                       'Get Budget',
                       style: TextStyle(
@@ -52,7 +56,9 @@ class _LookingForScreenState extends State<LookingForScreen> {
                       ),
                     )),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(GetBudget());
+                    },
                     icon: Icon(
                       Icons.arrow_forward,
                       color: Colors.white,
@@ -177,7 +183,29 @@ class _LookingForScreenState extends State<LookingForScreen> {
                         ],
                       ),
                       children: [
-                        Text('data'),
+                        Container(
+                          height: 60,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                color: const Color.fromRGBO(238, 240, 243, 1),
+                              ),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: CustomDropdown.multiSelect(
+                            hintText: 'Print Design',
+                            decoration: CustomDropdownDecoration(
+                              hintStyle: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.black,
+                              ),
+                            ),
+                            items: ['choice 1', 'choice 2'],
+                            onListChanged: (value) {
+                              print(value);
+                              // value = '';
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 10),
                       ],
                     );
                   },
