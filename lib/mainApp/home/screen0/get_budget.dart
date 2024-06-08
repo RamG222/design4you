@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tab_container/tab_container.dart';
 
+bool checkedValue = false;
+
 class GetBudget extends StatefulWidget {
   const GetBudget({super.key});
 
@@ -224,7 +226,50 @@ class _GetBudgetState extends State<GetBudget>
                             ),
                           ),
                         ],
-                      )
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Brochures',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
                     ],
                   )),
                 ),

@@ -1,7 +1,4 @@
 import 'package:camera/camera.dart';
-import 'package:design4you/mainApp/home/screen0/get_budget.dart';
-import 'package:design4you/mainApp/home/screen0/lookingfor.dart';
-import 'package:design4you/mainApp/home/screen0/post_summary.dart';
 import 'package:design4you/mainApp/home/screen0/screen0.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

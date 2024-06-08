@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:expansion_tile_group/expansion_tile_group.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PostSummary extends StatefulWidget {
   const PostSummary({super.key});
@@ -19,7 +20,7 @@ class _PostSummaryState extends State<PostSummary> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -27,13 +28,13 @@ class _PostSummaryState extends State<PostSummary> {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+                      onPressed: () {
+                        Get.back();
+                      },
+                      icon: Icon(Icons.arrow_back_ios)),
                   Text(
                     'Post Summary',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins',
-                        fontSize: 21),
+                    style: TextStyle(fontFamily: 'Poppins', fontSize: 21),
                   ),
                 ],
               ),
@@ -42,6 +43,8 @@ class _PostSummaryState extends State<PostSummary> {
                   toggleType: ToggleType.expandOnlyCurrent,
                   children: [
                     ExpansionTileItem(
+                      iconColor: Colors.white,
+                      collapsedIconColor: Colors.white,
                       backgroundColor: Color.fromRGBO(193, 90, 119, 1),
                       collapsedBackgroundColor: Color.fromRGBO(193, 90, 119, 1),
                       title: Container(
@@ -62,6 +65,8 @@ class _PostSummaryState extends State<PostSummary> {
                       ],
                     ),
                     ExpansionTileItem(
+                      iconColor: Colors.white,
+                      collapsedIconColor: Colors.white,
                       backgroundColor: Color.fromRGBO(49, 121, 170, 1),
                       collapsedBackgroundColor: Color.fromRGBO(49, 121, 170, 1),
                       title: Container(
@@ -82,6 +87,8 @@ class _PostSummaryState extends State<PostSummary> {
                       ],
                     ),
                     ExpansionTileItem(
+                      iconColor: Colors.white,
+                      collapsedIconColor: Colors.white,
                       backgroundColor: Color.fromRGBO(87, 188, 184, 1),
                       collapsedBackgroundColor: Color.fromRGBO(87, 188, 184, 1),
                       title: Container(
