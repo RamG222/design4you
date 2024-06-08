@@ -244,6 +244,7 @@ class _HomeState extends State<Home> {
               SizedBox(height: mQHeight / 60),
               whatsNewWidget(),
               Recent(),
+              SizedBox(height: 8),
               Container(
                 width: double.infinity,
                 height: mQHeight / 5,

@@ -5,6 +5,29 @@ import 'package:design4you/mainApp/home/screen0/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+List<String> catName = [
+  'Graphic Design',
+  'UIUX Design',
+  'Social Media Marketing',
+  'Video Advertising',
+  'Web Design',
+  'App Development',
+  'Digital Marketing',
+  'Influencers',
+  'Animation/VFX',
+];
+List<String> catDesp = [
+  'Logo, Flyer, Poster, Banner',
+  'Wireframe,UI Design',
+  'Profile Making,Post Design',
+  'Motion Graphics',
+  'Web,Research,Testimonials',
+  'Frontend,QA,Backend',
+  'Social,Connect,Banner',
+  'Animation,2D/3D,VFX',
+  'Art Painting'
+];
+
 class LookingForScreen extends StatefulWidget {
   const LookingForScreen({super.key});
 
@@ -138,10 +161,12 @@ class _LookingForScreenState extends State<LookingForScreen> {
               ),
               SizedBox(
                 height: 1000,
+                width: double.infinity,
                 child: ListView.builder(
+                  padding: EdgeInsets.all(4),
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: 1,
+                  itemCount: catName.length,
                   itemBuilder: (context, index) {
                     return ExpansionTile(
                       tilePadding: EdgeInsets.all(0),
@@ -162,17 +187,25 @@ class _LookingForScreenState extends State<LookingForScreen> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      AutoSizeText(
-                                        'Graphics Designs',
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
+                                      SizedBox(
+                                        width: 230,
+                                        child: AutoSizeText(
+                                          catName[index],
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 1,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                      AutoSizeText(
-                                        'Logo, flyer, poster, banner',
-                                        overflow: TextOverflow.ellipsis,
+                                      SizedBox(
+                                        width: 230,
+                                        child: AutoSizeText(
+                                          catDesp[index],
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
                                       )
                                     ],
                                   ),

@@ -2,6 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:expansion_tile_group/expansion_tile_group.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:radio_group_v2/widgets/view_models/radio_group_controller.dart';
+import 'package:radio_group_v2/widgets/views/radio_group.dart';
+
+RadioGroupController radioController = RadioGroupController();
+RadioGroupController radioController2 = RadioGroupController();
 
 class PostSummary extends StatefulWidget {
   const PostSummary({super.key});
@@ -163,6 +168,47 @@ class _PostSummaryState extends State<PostSummary> {
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
                     fontSize: 22),
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 80,
+                    child: Text(
+                      'Priority',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  RadioGroup(
+                    orientation: RadioGroupOrientation.horizontal,
+                    controller: radioController,
+                    values: [
+                      "Urgent/24 hrs",
+                      "Regular",
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 15),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 80,
+                    child: Text(
+                      'Deal With',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  RadioGroup(
+                    orientation: RadioGroupOrientation.horizontal,
+                    controller: radioController2,
+                    values: [
+                      "Via D4U",
+                      "Direct",
+                    ],
+                  ),
+                ],
               ),
               const SizedBox(height: 40),
               ElevatedButton(

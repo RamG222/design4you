@@ -1,5 +1,5 @@
 name: design4you
-description: "A new Flutter project."
+description: "Made by Ram Gupta, Shriramgupta8141@gmail.com"
 publish_to: "none"
 version: 0.1.0
 
@@ -25,6 +25,7 @@ dependencies:
   sms_autofill:
   tab_container: ^3.5.3
   expansion_tile_group: ^1.2.4
+  radio_group_v2: ^3.1.1
 
 dev_dependencies:
   flutter_test:

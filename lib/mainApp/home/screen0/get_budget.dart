@@ -102,7 +102,11 @@ class _GetBudgetState extends State<GetBudget>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 50),
-            IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+            IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: Icon(Icons.arrow_back_ios)),
             SizedBox(height: 10),
             Row(
               children: [
@@ -270,14 +274,1059 @@ class _GetBudgetState extends State<GetBudget>
                           )
                         ],
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Logo Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Flyer Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Digital Designing',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              backgroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.add),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Add',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Web Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'App Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Divider(),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Min  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '1400',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Max  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '5000',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   )),
                 ),
-                Container(
-                  child: Text('Child 2'),
+                SizedBox(
+                  width: double.infinity,
+                  height: mQHeight / 1.8,
+                  child: Container(
+                      child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(''),
+                          Row(
+                            children: [
+                              Text(
+                                'Min. ₹',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(width: 25),
+                              Text(
+                                'Max. ₹',
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(width: 15),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Graphics Designing',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              backgroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.add),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Add',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Brochures',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Logo Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Flyer Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Digital Designing',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              backgroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.add),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Add',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Web Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'App Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Divider(),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Min  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '1400',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Max  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '5000',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )),
                 ),
-                Container(
-                  child: Text('Child 3'),
+                SizedBox(
+                  width: double.infinity,
+                  height: mQHeight / 1.8,
+                  child: Container(
+                      child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(''),
+                          Row(
+                            children: [
+                              Text(
+                                'Min. ₹',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(width: 25),
+                              Text(
+                                'Max. ₹',
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(width: 15),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Graphics Designing',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              backgroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.add),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Add',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Brochures',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Logo Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Flyer Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Digital Designing',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              backgroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.add),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Add',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'Web Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                value: checkedValue,
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    checkedValue = value!;
+                                  });
+                                },
+                              ),
+                              Text(
+                                'App Design',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '3500',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                              Text(
+                                '5000',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 35),
+                            ],
+                          )
+                        ],
+                      ),
+                      Divider(),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Min  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '1400',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.12),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: SizedBox(
+                              width: 150,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Avg. Max  ₹',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      '5000',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 21),
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  )),
                 ),
               ],
             ),

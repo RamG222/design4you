@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:design4you/mainApp/home/screen0/categoriesModel.dart';
-import 'package:design4you/mainApp/home/screen0/lookingfor.dart';
+import 'package:design4you/mainApp/home/screen0/looking_for.dart';
 import 'package:design4you/register/freelancer/register2/category_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
