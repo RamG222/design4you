@@ -27,6 +27,17 @@ List<String> catDesp = [
   'Animation,2D/3D,VFX',
   'Art Painting'
 ];
+List<String> catImg = [
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+  'assets/images/graphics.png',
+];
 
 class LookingForScreen extends StatefulWidget {
   const LookingForScreen({super.key});
@@ -178,7 +189,7 @@ class _LookingForScreenState extends State<LookingForScreen> {
                               Row(
                                 children: [
                                   Image.asset(
-                                    'assets/images/graphics.png',
+                                    catImg[index],
                                     width: 80,
                                     height: 80,
                                   ),

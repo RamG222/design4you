@@ -27,7 +27,7 @@ class _HomepageState extends State<Homepage> {
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/03.gif'),   fit: BoxFit.cover),
+                image: AssetImage('assets/images/03.gif'), fit: BoxFit.cover),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,

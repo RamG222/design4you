@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:expansion_tile_group/expansion_tile_group.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:radio_group_v2/utils/radio_group_decoration.dart';
 import 'package:radio_group_v2/widgets/view_models/radio_group_controller.dart';
 import 'package:radio_group_v2/widgets/views/radio_group.dart';
 
@@ -48,10 +49,11 @@ class _PostSummaryState extends State<PostSummary> {
                   toggleType: ToggleType.expandOnlyCurrent,
                   children: [
                     ExpansionTileItem(
+                      childrenPadding: EdgeInsets.all(0),
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
-                      backgroundColor: Color.fromRGBO(193, 90, 119, 1),
                       collapsedBackgroundColor: Color.fromRGBO(193, 90, 119, 1),
+                      backgroundColor: Color.fromRGBO(193, 90, 119, 1),
                       title: Container(
                         margin: EdgeInsets.symmetric(vertical: 25),
                         child: Text(
@@ -63,13 +65,276 @@ class _PostSummaryState extends State<PostSummary> {
                         ),
                       ),
                       children: [
-                        SizedBox(
-                          width: double.infinity,
-                          height: 500,
-                        ),
+                        Container(
+                            color: Colors.white,
+                            child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Category',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Min. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Max. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(''),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+                                  Divider(),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7),
+                                        child: Text('Graphics Desing'),
+                                      ),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Brochures',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Flyers',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('Digital Desing'),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Web Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'App Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )),
                       ],
                     ),
                     ExpansionTileItem(
+                      childrenPadding: EdgeInsets.all(0),
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
                       backgroundColor: Color.fromRGBO(49, 121, 170, 1),
@@ -85,13 +350,276 @@ class _PostSummaryState extends State<PostSummary> {
                         ),
                       ),
                       children: [
-                        SizedBox(
-                          width: double.infinity,
-                          height: 500,
-                        ),
+                        Container(
+                            color: Colors.white,
+                            child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Category',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Min. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Max. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(''),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+                                  Divider(),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7),
+                                        child: Text('Graphics Desing'),
+                                      ),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Brochures',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Flyers',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('Digital Desing'),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Web Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'App Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )),
                       ],
                     ),
                     ExpansionTileItem(
+                      childrenPadding: EdgeInsets.all(0),
                       iconColor: Colors.white,
                       collapsedIconColor: Colors.white,
                       backgroundColor: Color.fromRGBO(87, 188, 184, 1),
@@ -107,10 +635,272 @@ class _PostSummaryState extends State<PostSummary> {
                         ),
                       ),
                       children: [
-                        SizedBox(
-                          width: double.infinity,
-                          height: 500,
-                        ),
+                        Container(
+                            color: Colors.white,
+                            child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Category',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Min. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        'Max. ₹',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(''),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+                                  Divider(),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7),
+                                        child: Text('Graphics Desing'),
+                                      ),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Brochures',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Flyers',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('Digital Desing'),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.add,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                'ADD',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'Web Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        'App Design',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('1200'),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Color.fromRGBO(
+                                                  238, 240, 243, 1)),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10),
+                                          child: Text('3000'),
+                                        ),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.delete_outline,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )),
                       ],
                     ),
                   ]),
@@ -119,7 +909,7 @@ class _PostSummaryState extends State<PostSummary> {
                   Container(
                     width: double.infinity,
                     height: 150,
-                    margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+                    margin: const EdgeInsets.fromLTRB(0, 20, 0, 10),
                     padding: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -180,6 +970,9 @@ class _PostSummaryState extends State<PostSummary> {
                   ),
                   SizedBox(width: 10),
                   RadioGroup(
+                    decoration: RadioGroupDecoration(
+                      activeColor: Colors.red,
+                    ),
                     orientation: RadioGroupOrientation.horizontal,
                     controller: radioController,
                     values: [
@@ -201,6 +994,9 @@ class _PostSummaryState extends State<PostSummary> {
                   ),
                   SizedBox(width: 10),
                   RadioGroup(
+                    decoration: RadioGroupDecoration(
+                      activeColor: Colors.red,
+                    ),
                     orientation: RadioGroupOrientation.horizontal,
                     controller: radioController2,
                     values: [

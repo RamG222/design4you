@@ -34,7 +34,7 @@ class whatsNewWidget extends StatelessWidget {
               child: Stack(
                 children: [
                   Image.network(
-                    'https://s3-alpha-sig.figma.com/img/8526/c35c/36ae50b47963cdb4e49faf08f3d199a9?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HzK21R9QPM30p~MfHdJOhwPBX5LIgx3vhEHvtdP22MxVrjB0izt2~tk7Z~K5-zXADvEbmjkzluMAXlkZtqyZ0jrpEsnmt9liEF8CGfLG6WHQ6hZA3AQfGWnSBqOV8pogKLyW3WKXE0K2zvBhita2PTNpL7Xdqo3uKfiX-vPp1OyxqRutqARM9BB2b0TP8qxAOcAvM4i923pFzqXUxNbzK2cyMGOKefzK6yLJUW007oRMDSTDfezcOnUS4gHAgDxUx78oOSYQcVs2MSa5G5Wb595YiUBjLlr97D8gxP5Rw7ieLiwp3L9Vlb3uSpfdoVzc2quo4gtHvPvD7A-w61spTg__',
+                    'https://s3-alpha-sig.figma.com/img/8526/c35c/36ae50b47963cdb4e49faf08f3d199a9?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CeMi4fJWcmuQyUtoFQeiI5OCGYcR4XSxqXp1rTozWFpZWiaA5cIM4KbbWeNAso9x2pg322wygsb2MmBDsSWOagg1Yai~BftwCqAd9Bx-~HYO5Z~JKHf8CmKnPD7mzp-df5doyWJGievpyk8tzafr67ogVMlxJNf~f616y7rFkFfe~cysFOyzM4G~aVwnWPYHPqb3Rb4JVKvEaVtKnhNbWgIimpMNHkuZYJaqzZXCP6kuDEa4iJeKckvmK1ciVgJV5jkPgD5j0elukDbJUI5hh7fWTwpG5QL~1X2PL2toqVr4skaBQ3B0gxpsxBT-NFvoxlPT1HqbUxBKh-lpgoNnrQ__',
                     width: mQWidth,
                     height: mQWidth / 1.2,
                     fit: BoxFit.cover,
