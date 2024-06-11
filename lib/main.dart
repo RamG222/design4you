@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:design4you/mainApp/home/screen0/screen0.dart';
+import 'package:design4you/mainApp/home/screen0/list_freelancers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -9,7 +10,7 @@ var cameras;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  ///initialize camera
+  ///initialize cameras
   cameras = await availableCameras();
   //disable device rotate.
   await SystemChrome.setPreferredOrientations([
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       //navigates to splash screen
-      home: Home(),
+      home: ListFreelancersScreen(),
     );
   }
 }

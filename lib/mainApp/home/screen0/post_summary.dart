@@ -128,10 +128,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Brochures',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Brochures',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -173,10 +176,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Flyers',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Flyers',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -242,10 +248,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Web Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Web Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -287,10 +296,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'App Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'App Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -413,10 +425,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Brochures',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Brochures',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -458,10 +473,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Flyers',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Flyers',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -527,10 +545,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Web Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Web Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -572,10 +593,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'App Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'App Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -698,10 +722,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Brochures',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Brochures',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -743,10 +770,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Flyers',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Flyers',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -812,10 +842,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'Web Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'Web Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(
@@ -857,10 +890,13 @@ class _PostSummaryState extends State<PostSummary> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        'App Design',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: 100,
+                                        child: Text(
+                                          'App Design',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                       Container(
                                         decoration: BoxDecoration(

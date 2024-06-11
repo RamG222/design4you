@@ -1,4 +1,5 @@
 import 'package:design4you/mainApp/home/screen0/post_summary.dart';
+import 'package:design4you/mainApp/home/screen0/list_freelancers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -65,7 +66,11 @@ class _GetBudgetState extends State<GetBudget>
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(
+                            ListFreelancersScreen(),
+                          );
+                        },
                         child: Text(
                           'View Freelancers',
                           style: TextStyle(color: Colors.white),

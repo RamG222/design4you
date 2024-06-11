@@ -242,7 +242,7 @@ class _LookingForScreenState extends State<LookingForScreen> {
                                 color: Colors.black,
                               ),
                             ),
-                            items: ['choice 1', 'choice 2'],
+                            items: ['Flyers', 'Logo Design'],
                             onListChanged: (value) {
                               print(value);
                               // value = '';
